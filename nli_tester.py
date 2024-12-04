@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from sentence_transformers import SentenceTransformer
 
-with open("reply.txt", "r") as reply_file:
+with open("reply_latex_format.txt", "r") as reply_file:
     chat_gpt_reply = "".join(reply_file.readlines())
 
 official_solution = "\\textbf{Central Data Structure:} AVL Tree. \\textbf{Brief Description:} We will use the standard operations of an AVL tree. \\textbf{Complexity Explanation:} All operations are in worst-case in \(O(\log n)\), and therefore, in particular, amortized directly from the definition of amortized."
