@@ -9,6 +9,7 @@ df = pd.read_pickle(file_path)
 
 q16a_2018_aa = df.loc[(df['exam_year'] == 2018) & (df['semester'] == "A") & (df['moed'] == "A") & (df['question_number'] == "16-a") ]
 msg = q16a_2018_aa.iloc[0]['question_translation_latex']
+real_solution = q16a_2018_aa.iloc[0]['answer_translation_latex']
 
 
 with open("api_key.txt", "r") as api_key_file:
@@ -31,4 +32,7 @@ print(f"ChatGPT: {reply}")
 
 with open("reply.txt", "w") as output_file:
     output_file.write(reply)
+
+with open("ptbs answer", "w") as ptbs_file:
+    ptbs_file.write(real_solution)
 
