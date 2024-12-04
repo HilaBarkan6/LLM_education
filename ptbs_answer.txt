@@ -1,0 +1,1 @@
+\textbf{Central Data Structure:} AVL Tree. \textbf{Brief Description:} We will use the standard operations of an AVL tree. \textbf{Complexity Explanation:} All operations are in worst-case in \(O(\log n)\), and therefore, in particular, amortized directly from the definition of amortized.

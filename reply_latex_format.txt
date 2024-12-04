@@ -1,0 +1,5 @@
+To implement a data structure with the operations Insert(x), Search(x), and Delete(x) all in amortized time \(O(\log n)\), we can use a self-balancing binary search tree such as an AVL tree or a Red-Black tree.
+
+These trees guarantee that the height of the tree remains balanced, ensuring that the operations Insert, Search, and Delete all have a time complexity of \(O(\log n)\) amortized. The balancing of the tree is achieved by performing rotations and other operations during each insertion and deletion to maintain the desired balance.
+
+Therefore, using a self-balancing binary search tree is a suitable solution to achieve the required time complexity for the specified operations.

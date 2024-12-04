@@ -27,7 +27,9 @@ def chat_gpt(prompt):
     )
     return response.choices[0].message.content.strip()
 
-reply = chat_gpt(msg)
+msg_prefix = "Write the solution in latex format: "
+
+reply = chat_gpt(msg_prefix + msg)
 print(f"ChatGPT: {reply}")
 
 with open("reply.txt", "w") as output_file:
