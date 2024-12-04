@@ -1,0 +1,11 @@
+To implement a data structure with the mentioned operations, we can use a combination of a balanced binary search tree (such as AVL tree, Red-Black tree, or Splay tree) and a hash table.
+
+\begin{itemize}
+    \item Insert(x): We can insert the key x into the binary search tree with $O(\log n)$ amortized time complexity to maintain the balanced property. Additionally, we can also insert the key into a hash table for $O(1)$ amortized time complexity for quick lookup.
+    
+    \item Search(x): First, we can search for the key in the hash table with $O(1)$ amortized time complexity. If the key is found, we return it. Otherwise, we search for the key in the binary search tree with $O(\log n)$ amortized time complexity.
+    
+    \item Delete(x): We can delete the key x from the hash table with $O(1)$ amortized time complexity. Then, we can delete the key from the binary search tree with $O(\log n)$ amortized time complexity to maintain the balanced property.
+\end{itemize}
+
+By combining the binary search tree and hash table, we can achieve the desired amortized time complexities for Insert, Search, and Delete operations.
