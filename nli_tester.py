@@ -3,10 +3,12 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from sentence_transformers import SentenceTransformer
 
-with open("reply_latex_format.txt", "r") as reply_file:
-    chat_gpt_reply = "".join(reply_file.readlines())
+with open("ptbs_answer_13a.txt", "r") as ptbs_file:
+    ptbs = "".join(ptbs_file.readlines())
 
-official_solution = "\\textbf{Central Data Structure:} AVL Tree. \\textbf{Brief Description:} We will use the standard operations of an AVL tree. \\textbf{Complexity Explanation:} All operations are in worst-case in \(O(\log n)\), and therefore, in particular, amortized directly from the definition of amortized."
+with open("reply_13a.txt", "r") as reply_file:
+    reply_latex = "".join(reply_file.readlines())
+
 
 # model 1 - nli-MiniLM2-L6-H768
 print("starting nli-MiniLM2-L6-H768...")
@@ -14,7 +16,7 @@ model = AutoModelForSequenceClassification.from_pretrained('cross-encoder/nli-Mi
 tokenizer = AutoTokenizer.from_pretrained('cross-encoder/nli-MiniLM2-L6-H768')
 print("created model and tokenizer")
 print("starting tokenizer...")
-features = tokenizer([chat_gpt_reply, official_solution], [official_solution, chat_gpt_reply],  padding=True, truncation=True, return_tensors="pt")
+features = tokenizer([ptbs, reply_latex, ptbs], [reply_latex, ptbs, ptbs],  padding=True, truncation=True, return_tensors="pt")
 print("starting eval...")
 model.eval()
 print("finished eval")
