@@ -3,10 +3,10 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from sentence_transformers import SentenceTransformer
 
-with open("ptbs_answer_13a.txt", "r") as ptbs_file:
+with open("../results/ptbs_answer_13a.txt", "r") as ptbs_file:
     ptbs = "".join(ptbs_file.readlines())
 
-with open("reply_13a.txt", "r") as reply_file:
+with open("../results/reply_13a.txt", "r") as reply_file:
     reply_latex = "".join(reply_file.readlines())
 
 

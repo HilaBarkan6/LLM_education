@@ -3,7 +3,7 @@ import openai
 from openai import OpenAI
 
 # Set up chatgpt
-with open("api_key.txt", "r") as api_key_file:
+with open("../api_key.txt", "r") as api_key_file:
     key = api_key_file.readline()
 
 client = OpenAI(
@@ -39,7 +39,7 @@ def chat_gpt(prompt):
 # current_questions['chat_answer'] = chat_answers
 # current_questions.to_csv("C:\\Projects\\LLM_education\\2018_AB_chat_solutions.csv")
 
-current_questions = pd.read_csv("C:\\Projects\\LLM_education\\2018_AB_chat_solutions.csv")
+current_questions = pd.read_csv("C:\\Projects\\LLM_education\\results\\2018_AB_chat_solutions.csv")
 
 llm_judge_results = []
 for index, row in current_questions.iterrows():
@@ -55,5 +55,5 @@ for index, row in current_questions.iterrows():
     print(row['question_number'])
 
 current_questions['judge'] = llm_judge_results
-current_questions.to_csv("C:\\Projects\\LLM_education\\2018_AB_llm_judge.csv")
+current_questions.to_csv("C:\\Projects\\LLM_education\\results\\2018_AB_llm_judge.csv")
 

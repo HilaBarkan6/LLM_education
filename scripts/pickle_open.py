@@ -12,7 +12,7 @@ msg = current_question.iloc[0]['question_translation_latex']
 real_solution = current_question.iloc[0]['answer_translation_latex']
 
 
-with open("api_key.txt", "r") as api_key_file:
+with open("../api_key.txt", "r") as api_key_file:
     key = api_key_file.readline()
 
 client = OpenAI(
@@ -32,9 +32,9 @@ msg_prefix = "Write the solution to the following question in latex format: "
 reply = chat_gpt(msg_prefix + msg)
 print(f"ChatGPT: {reply}")
 
-with open("reply_13a.txt", "w") as output_file:
+with open("../results/reply_13a.txt", "w") as output_file:
     output_file.write(reply)
 
-with open("ptbs_answer_13a.txt", "w") as ptbs_file:
+with open("../results/ptbs_answer_13a.txt", "w") as ptbs_file:
     ptbs_file.write(real_solution)
 

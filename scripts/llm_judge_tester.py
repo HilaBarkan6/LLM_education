@@ -1,12 +1,12 @@
 from openai import OpenAI
 
-with open("api_key.txt", "r") as api_key_file:
+with open("../api_key.txt", "r") as api_key_file:
     key = api_key_file.readline()
 
-with open("ptbs_answer_16b_updated.txt", "r") as ptbs_file:
+with open("../results/ptbs_answer_16b_updated.txt", "r") as ptbs_file:
     ptbs = "".join(ptbs_file.readlines())
 
-with open("reply_16b.txt", "r") as reply_file:
+with open("../results/reply_16b.txt", "r") as reply_file:
     reply_latex = "".join(reply_file.readlines())
 
 client = OpenAI(
