@@ -1,4 +1,4 @@
-,Column 1,question_type,exam_year,semester,moed,question_number,url,points,question_translation_latex,multiple_choice_answer,topics_covered,dataset,question_in_hebrew,answer_in_hebrew,answer_translation_latex,chat_answer,is_chat_correct,is_ptbs_good,nli_results
+,Column 1,question_type,exam_year,semester,moed,question_number,url,points,question_translation_latex,multiple_choice_answer,topics_covered,dataset,question_in_hebrew,answer_in_hebrew,answer_translation_latex,chat_answer,is_chat_correct,is_ptbs_good,nli_results,nli_correct
 0,90,C,2004,a,a,3,https://docs.google.com/document/d/1XDB0oWMfvAxlym7XTAow0iF4PbwLN3qE,7,"
 $T(n) = T(n/4) + T(3n/4) + 1$  
 A. $T(n) = \theta(n)$  
@@ -16,7 +16,7 @@ T(n) = T(n/4) + T(3n/4) + 1
 ה. T(n) = θ(log(n)^2) 
 ו. T(n) = θ(log(n)^0.75)",א.,"
 Part A.
-",B. $T(n) = \theta(n^{\log_3{4}})$,no,yes,"[['contradiction'], ['contradiction']]"
+",B. $T(n) = \theta(n^{\log_3{4}})$,no,yes,"[['contradiction'], ['contradiction']]",yes
 1,92,C,2004,a,a,5,https://docs.google.com/document/d/1XDB0oWMfvAxlym7XTAow0iF4PbwLN3qE,7,"
 If \(\log(f(n)) = \theta(\log(g(n)))\) then necessarily:
 a. \(f(n) = \theta(g(n + 1))\)
@@ -44,7 +44,7 @@ which implies that \(g(n + 1) \leq f(n) \leq g(n + 1)^{c_2/c_1}\) for all \(n \g
 
 Since \(g(n + 1) \leq f(n) \leq g(n + 1)^{c_2/c_1}\) for all \(n \geq n_0\), we can conclude that \(f(n) = \theta(g(n + 1))\).
 
-Therefore, the correct answer is: a. \(f(n) = \theta(g(n + 1))\)",no,yes,"[['contradiction'], ['neutral']]"
+Therefore, the correct answer is: a. \(f(n) = \theta(g(n + 1))\)",no,yes,"[['contradiction'], ['neutral']]",yes
 2,93,C,2004,a,a,6,https://docs.google.com/document/d/1XDB0oWMfvAxlym7XTAow0iF4PbwLN3qE,7,"
 Given a binary search tree that supports order statistic operations. The height of the tree in edges is \( h \) and it contains \( n \) elements. An in-order traversal is performed on the tree, but instead of printing the keys, the value of the Size field is printed.
 The maximum value will necessarily be printed in the location:
@@ -83,7 +83,7 @@ To find the maximum value of the Size field printed during the in-order traversa
 
 Therefore, the answer is:
 
-\[\text{One of the first } h \text{ places.}\]",no,yes,"[['entailment'], ['neutral']]"
+\[\text{One of the first } h \text{ places.}\]",no,yes,"[['entailment'], ['neutral']]",no
 3,95,C,2004,a,a,8,https://docs.google.com/document/d/1XDB0oWMfvAxlym7XTAow0iF4PbwLN3qE,7,"\noindent
 Modify the QuickSort algorithm as follows: the pivot element will be selected by choosing the $n/4$ order statistic, using the Select function. The running time of the new algorithm will be:
 \begin{itemize}
@@ -113,7 +113,7 @@ The recurrence formula: \( T(n) = T\left(\frac{3n}{4}\right) + T\left(\frac{n}{4
     \item[(d)] W.C.- $\Theta(n\log(n))$, Expected - $\Theta(n\log(n))$
     \item[(e)] W.C.- $\Theta(n^{0.25}\log(n))$, Expected - $\Theta(n^{0.25}\log(n))$ 
     \item[(f)] W.C.- $\Theta(n^2\log(n))$, Expected - $\Theta(n^2\log(n))$
-\end{itemize}",question,yes,"[['neutral'], ['entailment']]"
+\end{itemize}",question,yes,"[['neutral'], ['entailment']]",
 4,102,C,2004,b,"a,b",1,https://docs.google.com/document/d/1LSxoxH2sEItqkTRlrCstcMk02LN676Jz,8,"
 Solve the following recurrence formula:
 \[ T(n) = T(c \cdot n) + T((1-c) \cdot n) + n \]
@@ -157,7 +157,7 @@ Substituting the values we found earlier, we get:
 
 \[ T(n) = \theta \left( n^{\frac{1}{\log_{c} \frac{1}{1-c}}} \left( 1 + \int_{1}^{n} \frac{1}{u^{\frac{1}{\log_{c} \frac{1}{1-c}}}} du \right) \right) \]
 
-After solving this integral and simplifying, we will be able to determine the asymptotic behavior of \( T(n) \) and match it with the given options.",maybe,no,"[['neutral'], ['entailment']]"
+After solving this integral and simplifying, we will be able to determine the asymptotic behavior of \( T(n) \) and match it with the given options.",maybe,no,"[['neutral'], ['entailment']]",
 5,103,C,2004,b,"a,b",2,https://docs.google.com/document/d/1LSxoxH2sEItqkTRlrCstcMk02LN676Jz,8,"What is the asymptotic relationship between the following functions:
 If there are multiple correct answers, choose the tightest one.
 \( f(n) = \frac{n}{\log(n)}, \quad g(n) = \frac{n^2}{(\log(n))^{2004}} \)
@@ -179,7 +179,7 @@ For all \( \epsilon > 0 \), it holds that \(\log n = o(n)\).
 ","The correct answer is:
 \begin{enumerate}
     \item \( f(n) = o(g(n)) \)
-\end{enumerate}",yes,no,"[['neutral'], ['neutral']]"
+\end{enumerate}",yes,no,"[['neutral'], ['neutral']]",n
 6,106,C,2004,b,"a,b",5,https://docs.google.com/document/d/1LSxoxH2sEItqkTRlrCstcMk02LN676Jz,9,"Given an Order-Statistics Tree as defined in class, with the additional field size (i.e., the size of a node x is the number of nodes, including x, in the subtree for which x is the root). In how much time can we print the k nodes in the tree with the largest size field? It is allowed to assume that $k < n^{0.5}$.
 A. \(\Theta(n)\).
 B. \(\Theta(n \log n)\).
@@ -201,7 +201,7 @@ We can use an algorithm similar to in-order traversal with a slight modification
 
 To print the k nodes with the largest size field, we need to visit each of these nodes once. In the worst-case scenario, we might need to traverse up to k levels in the tree to find the k largest nodes. At each level of the tree, we might need to do some constant work to decide which subtree to visit next.
 
-Therefore, the total time complexity will be proportional to the number of nodes we visit, which is \(\Theta(k)\), and the height of the tree, which is \(\Theta(\log n)\). Hence, the overall time complexity will be \(\Theta(k \log n)\).",no,no,"[['contradiction'], ['neutral']]"
+Therefore, the total time complexity will be proportional to the number of nodes we visit, which is \(\Theta(k)\), and the height of the tree, which is \(\Theta(\log n)\). Hence, the overall time complexity will be \(\Theta(k \log n)\).",no,no,"[['contradiction'], ['neutral']]",yes
 7,107,C,2004,b,"a,b",6,https://docs.google.com/document/d/1LSxoxH2sEItqkTRlrCstcMk02LN676Jz,8,"\begin{quote}
 We want a data structure that supports the operations Insert, Delete, and Find.
 
@@ -252,7 +252,7 @@ Now, let's compare the two structures:
 
 From the comparison above, we can see that the second structure is preferable in order to achieve the lowest worst-case time for the algorithm.
 
-Therefore, the correct answer is \textbf{(b.)} The second.",no,yes,"[['contradiction'], ['neutral']]"
+Therefore, the correct answer is \textbf{(b.)} The second.",no,yes,"[['contradiction'], ['neutral']]",yes
 8,108,C,2004,b,"a,b",7,https://docs.google.com/document/d/1LSxoxH2sEItqkTRlrCstcMk02LN676Jz,9,"
 We are interested in the following problem:
 Input: An array of size $n$.
@@ -280,7 +280,7 @@ E. None of the above
 Insert all elements into a Hash table of size $n$ (collision resolution using linked lists) in expected time $O(n)$. Duplicate values will be stored in the same list element by a counter. \\
 The counters are integers between $1$ and $n$, so they can be sorted in an array using counting sort (CountSort) in time $O(n)$. Now, with the help of two indices, one can traverse the array from the beginning and the end, and check if there are two elements in the array whose sum is $2004$. \\","The solution is: B. $\Theta(n)$
 
-We can solve this problem in linear time by using a hash table to keep track of the frequency of each value in the array. We then iterate through the array and check if there exists a pair of values whose frequencies sum up to 2004. This can be done in $\Theta(n)$ time.",yes,yes,"[['neutral'], ['entailment']]"
+We can solve this problem in linear time by using a hash table to keep track of the frequency of each value in the array. We then iterate through the array and check if there exists a pair of values whose frequencies sum up to 2004. This can be done in $\Theta(n)$ time.",yes,yes,"[['neutral'], ['entailment']]",yes
 9,118,C,2005,a,a,5,https://docs.google.com/document/d/1Ze9Vu1t-M8eGfSRY5m6GdpbIz9KUxnzN,8,"
 In a max-heap, the median is necessarily located:
 
@@ -303,7 +303,7 @@ E. none of the above.
     \item[(e)] The median can be a direct child of the root (for example, if every right subtree is larger than every left subtree), and it can also be in one of the leaves (if the half smallest values are in the leaves).
 \end{itemize}","The solution in LaTeX format is:
 
-\textbf{B.} at a depth of at most $\frac{\log(n)}{2} - 1$.",no,yes,"[['neutral'], ['neutral']]"
+\textbf{B.} at a depth of at most $\frac{\log(n)}{2} - 1$.",no,yes,"[['neutral'], ['neutral']]",n
 10,119,C,2005,a,a,6,https://docs.google.com/document/d/1Ze9Vu1t-M8eGfSRY5m6GdpbIz9KUxnzN,8,"\noindent Let \( T \) be an AVL tree with \( n \) nodes. The height of a node is defined as the length of the longest path (in edges) from it to a leaf. For example, the height of a leaf is 0. Let \( m \) be the node that contains the minimum value in the tree. Then the height of \( m \) in \( T \) is: 
 
 \begin{enumerate}
@@ -329,7 +329,7 @@ b. The minimum has no left child. Therefore, it is a leaf or a node with a right
     \item less than or equal to \( 2 \).
     \item possibly \(\Theta(\log(n))\).
     \item possibly \(\Theta(n)\).
-\end{enumerate}",question,yes,"[['neutral'], ['contradiction']]"
+\end{enumerate}",question,yes,"[['neutral'], ['contradiction']]",
 11,120,C,2005,a,a,7,https://docs.google.com/document/d/1Ze9Vu1t-M8eGfSRY5m6GdpbIz9KUxnzN,9,"\noindent Given an array $A$ containing $n$ distinct (unsorted) elements. A min-heap $H$ is given, containing the same elements. We want to take the smallest $n^{0.5}$ elements and sort them in the lowest worst-case time. Let $a(n)$ be the cost of performing the operation (with the best algorithm you know) on $A$ and let $h(n)$ be the cost of performing the operation (with the best algorithm you know) on $H$. Then:
 \begin{enumerate}
     \item The cost of execution for both algorithms is identical.
@@ -350,7 +350,7 @@ h(n)=o(a(n .5)).",ה. על A מבצעים ORDER STAT ואחכ מיון. עלות
     \item The cost of execution for both algorithms is asymptotically the same, but the constant factor for $h(n)$ is lower.
     \item $a(n) = o(h(n))$.
     \item $h(n) = o(a(n))$.
-\end{enumerate}",question,,"[['contradiction'], ['contradiction']]"
+\end{enumerate}",question,,"[['contradiction'], ['contradiction']]",
 12,139,C,2006,a,a,3,https://docs.google.com/document/d/1altMUQBVybKQpoFz-rQsDmI_e0FWhzbu,8,"
 The recurrence formula \( T(n) = T(n/2) + T(n/2) + \theta(n) \) describes the W.C. running time of the following algorithms:
 Note: For a specific algorithm, it is not enough that the complexity matches the solution of the recurrence formula. The recurrence formula must also fit the operation of the algorithm.
@@ -394,7 +394,7 @@ The recurrence formula does not accurately describe the worst-case running time 
 6. b + c + d:
 Similar to the previous case, the recurrence formula does not accurately describe the worst-case running time of this algorithm without more context on the values of b, c, and d.
 
-Therefore, the only algorithm for which the given recurrence formula matches the worst-case running time is the algorithm that sorts by insertion into an AVL search tree and scans the tree at the end.",no,yes,"[['contradiction'], ['neutral']]"
+Therefore, the only algorithm for which the given recurrence formula matches the worst-case running time is the algorithm that sorts by insertion into an AVL search tree and scans the tree at the end.",no,yes,"[['contradiction'], ['neutral']]",yes
 13,140,C,2006,a,a,5,https://docs.google.com/document/d/1altMUQBVybKQpoFz-rQsDmI_e0FWhzbu,8,"
 Given a 2-3 search tree where the root has exactly two children: left and middle. Let \( X \) denote the number of nodes in the middle subtree and \( Y \) denote the number of nodes in the left subtree. Which of the following is necessarily true? (If more than one answer is correct, choose the tightest one).
 
@@ -420,7 +420,7 @@ It is possible for one subtree of each node to have exactly two children and the
 
 ","The correct answer is:
 
-\[ C. \ X \leq 2Y \]",no,yes,"[['entailment'], ['neutral']]"
+\[ C. \ X \leq 2Y \]",no,yes,"[['entailment'], ['neutral']]",no
 14,142,C,2006,a,a,7,https://docs.google.com/document/d/1altMUQBVybKQpoFz-rQsDmI_e0FWhzbu,8,"
 Given a binary search tree (not necessarily balanced) with \( n \) nodes, where each node has two additional fields: Pred, Suc, which point to the predecessor and successor of the node. We want to implement the Delete operation on this tree in the best possible W.C. time, such that after the deletion all the fields in the tree are correct. The delete operation receives a pointer to the element intended for deletion. It is allowed to assume that all the regular fields exist, such as \texttt{Parent[x]}. The resulting time is:
 \begin{enumerate}
@@ -445,7 +445,7 @@ Let \( x \) be the deleted element. Remember its predecessor and successor in or
 
 \begin{enumerate}
     \item \(\Theta(1)\)
-\end{enumerate}",yes,yes,"[['neutral'], ['neutral']]"
+\end{enumerate}",yes,yes,"[['neutral'], ['neutral']]",n
 15,161,C,2006,b,b,5,https://docs.google.com/document/d/1KYPVPcemr20Z7bG9QDBCTCrVsMuMWnyH,9,"\begin{quote}
 Given \( n \) numbers. We want to build a data structure from them. Which of the following structures will have the longest worst-case build time?
 \begin{enumerate}
@@ -483,7 +483,7 @@ However, Perfect Hash may require unbounded time: each time, we randomly choose 
 
 6. 1 + 2 + 3: Building a hash table with linked lists, a perfect hash, and a max heap separately will have a worst-case build time of O(n) + O(n) + O(n log n), which simplifies to O(n log n).
 
-Therefore, the structures with the longest worst-case build time are options 3 (Max Heap) and 6 (Hash Table with linked lists, Perfect Hash, and Max Heap).",no,yes,"[['neutral'], ['entailment']]"
+Therefore, the structures with the longest worst-case build time are options 3 (Max Heap) and 6 (Hash Table with linked lists, Perfect Hash, and Max Heap).",no,yes,"[['neutral'], ['entailment']]",no
 16,169,C,2007,a,a,3,https://docs.google.com/document/d/15av3BYO1sip8j7xbHE3cwGQOEe2WyO9U,7,"\text{Given a max-heap of size } n. \text{ The keys of } $\frac{n}{4}$  of the leaves in the heap have been changed, so now the heap may no longer be valid. We want to make the heap valid with minimal worst-case running time. Assume there is access to the elements of the heap (i.e., the heap is not a black box). The worst-case running time will be: \\
 a. \ $\theta(\log(n))$ \\
 b. \ $\theta(\log(n)^2)$ \\
@@ -505,7 +505,7 @@ The time required to access each of the nodes in our list is \( O(n) \), therefo
 \text{c. } \theta(n) \\
 \text{d. } \theta(n\log(n) \\
 \text{e. } \theta(n^3) \\
-\text{f. None of the above.}",question,yes,"[['contradiction'], ['contradiction']]"
+\text{f. None of the above.}",question,yes,"[['contradiction'], ['contradiction']]",
 17,173,C,2007,a,a,7,https://docs.google.com/document/d/15av3BYO1sip8j7xbHE3cwGQOEe2WyO9U,7,"\text{What is the lower bound in the comparison model of the worst-case runtime of a sorting algorithm, if it is known that }$ n^{0.5}$ \text{ of the smaller elements are already in the correct place?}
 \begin{enumerate}
     \item $\theta(\log(n))$
@@ -524,7 +524,7 @@ The time required to access each of the nodes in our list is \( O(n) \), therefo
 b. We still need to sort an array of size \( k \). Sorting an array of size \( k \) under the comparison model takes \( O(k \log k) \). But \( O(k \log k) \)
 ","The correct answer is: $\boxed{\theta(n\log(n))}$
 
-Explanation: When $n^{0.5}$ of the smaller elements are already in the correct place, we still need to sort the remaining $n - n^{0.5}$ elements. The comparison model lower bound for sorting is $\Omega(n\log(n))$, so the worst-case runtime of the sorting algorithm in this scenario is also $\Omega(n\log(n))$.",yes,yes,"[['neutral'], ['neutral']]"
+Explanation: When $n^{0.5}$ of the smaller elements are already in the correct place, we still need to sort the remaining $n - n^{0.5}$ elements. The comparison model lower bound for sorting is $\Omega(n\log(n))$, so the worst-case runtime of the sorting algorithm in this scenario is also $\Omega(n\log(n))$.",yes,yes,"[['neutral'], ['neutral']]",n
 18,216,c,2009,b,a,5,T2/ds2009ba-sol.doc,9,"We will discuss the implementation of a red-black tree where all the leaves are black (in the CORMEN implementation as taught in class, there is a layer of NILs that serves as the 'leaf layer' and is entirely black). What is the minimum ratio of black nodes to red nodes in a valid red-black tree?
 
 \begin{itemize}
@@ -534,7 +534,7 @@ Explanation: When $n^{0.5}$ of the smaller elements are already in the correct p
     \item[(D)] 1 black to 2 reds.
     \item[(E)] The ratio can be as small as we want.
 \end{itemize}
-",b,f,tested,,,"\text{2 blacks for 1 red. Each red node in the tree has two children, both black thanks to the NIL layer.}",The minimum ratio of black nodes to red nodes in a valid red-black tree is \textbf{2 blacks to 1 red} (Option B).,yes,yes,"[['neutral'], ['neutral']]"
+",b,f,tested,,,"\text{2 blacks for 1 red. Each red node in the tree has two children, both black thanks to the NIL layer.}",The minimum ratio of black nodes to red nodes in a valid red-black tree is \textbf{2 blacks to 1 red} (Option B).,yes,yes,"[['neutral'], ['neutral']]",n
 19,220,c,2009,b,a,9,T2/ds2009ba-sol.doc,9,"\text{Given an algorithm that receives an array of size } n \text{ of different unsorted numbers, along with an integer } k \text{ between } 1 \text{ and } n\text{. The algorithm prints the } k \text{ smallest numbers in the array in ascending order. A lower bound on the worst-case runtime of the algorithm (valid for any } k \leq n\text{) is:}
 \text{a. } \Omega(n)
 \text{b. } \Omega(k \log n)
@@ -561,12 +561,12 @@ Explanation: When $n^{0.5}$ of the smaller elements are already in the correct p
 
 Explanation:
 
-The algorithm must at least look at all $n$ elements in the worst case to determine the $k$ smallest numbers, so the lower bound on the worst-case runtime is $\Omega(n)$. Additionally, the algorithm must also sort the $k$ smallest numbers, which requires at least $k \log n$ comparisons in the worst case. Therefore, the correct answers are a and b.",yes,yes,"[['contradiction'], ['entailment']]"
+The algorithm must at least look at all $n$ elements in the worst case to determine the $k$ smallest numbers, so the lower bound on the worst-case runtime is $\Omega(n)$. Additionally, the algorithm must also sort the $k$ smallest numbers, which requires at least $k \log n$ comparisons in the worst case. Therefore, the correct answers are a and b.",yes,yes,"[['contradiction'], ['entailment']]",no
 20,224,b,2009,b,a,12-a,T2/ds2009ba-sol.doc,na,"\text{Given an array } A[1..n] \text{ containing } n \text{ elements, all different from each other. A pair of indices } (i, j) \text{ is called an inversion if } i < j \text{ and } A[i] > A[j].
 
 \text{Assume that the set of numbers is } \{1, 2, \ldots, n\}. \text{ Which array contains the highest number of inversions? How many inversions does it contain?}",na,d,tested,,,"\textit{In a reversely sorted array, each such pair is an inversion. The number of such pairs is } $\theta(n^2)$.","The array that contains the highest number of inversions is the array sorted in descending order, i.e. $A = [n, n-1, \ldots, 2, 1]$.
 
-To calculate the number of inversions in this array, we note that each element $A[i]$ to the left of an element $A[j]$ has to be greater than $A[j]$ in order to form an inversion. Since $A$ is sorted in descending order, each element is greater than all subsequent elements to its right. Thus, the number of inversions in this array is given by the sum of the first $n-1$ positive integers, which is $\frac{n(n-1)}{2}$.",,,"[['contradiction'], ['neutral']]"
+To calculate the number of inversions in this array, we note that each element $A[i]$ to the left of an element $A[j]$ has to be greater than $A[j]$ in order to form an inversion. Since $A$ is sorted in descending order, each element is greater than all subsequent elements to its right. Thus, the number of inversions in this array is given by the sum of the first $n-1$ positive integers, which is $\frac{n(n-1)}{2}$.",,,"[['contradiction'], ['neutral']]",
 21,245,b,2010,b,a,2-d,T2/ds10ba.doc,na,"\documentclass{article}
 \usepackage[utf8]{inputenc}
 \begin{document}
@@ -611,13 +611,13 @@ The routine $\text{find-median-char}(k1,k2,j)$ returns the median character in t
 
 What is the running time of the algorithm as a function of $m$ and $n$, assuming that $\text{find-median-char}(k1,k2,j)$ and $\text{partition}(k1,k2,C,j)$ run in time $O(k_2-k_1)$? Prove your answer.
 
-\end{document}",question,,"[['neutral'], ['contradiction']]"
+\end{document}",question,,"[['neutral'], ['contradiction']]",
 22,246,b,2010,b,a,3-a,T2/ds10ba.doc,na,"\textit{A tournament containing \( n \) elements is a perfect binary tree of depth \( i \) where \( i = \lceil \log_2(n) \rceil \) (at distance \( k \) from the root there are exactly \( 2^k \) nodes). The elements are placed at the leaves. In each internal node, we place the smallest of the elements located in the children of that node. A leaf that does not contain a real element contains a dummy element denoted by \( \infty \), which is greater than any real element. We represent the tree using an array like a binary heap, where the children of the node represented by cell \( i \) are represented by the cells \( 2i+1 \) and \( 2i+2 \).
 
 Given \( n \) elements, we construct a tournament containing them as follows. We allocate an array of appropriate size and initialize it entirely with the value \( \infty \). Then we insert the elements one by one. To add an element to the tournament, we place it in the next available leaf from left to right and update, if necessary, the elements located in the ancestors of that leaf.}
 
 \textit{What is the worst-case runtime of this algorithm?}",na,"a,e",tested,,,"\text{For each element, we ascend in the worst case up to the root.} \\
-\text{Therefore, the running time is } O(n\log n).",The worst-case runtime of this algorithm is \( O(n \log n) \).,yes,yes,"[['entailment'], ['neutral']]"
+\text{Therefore, the running time is } O(n\log n).",The worst-case runtime of this algorithm is \( O(n \log n) \).,yes,yes,"[['entailment'], ['neutral']]",yes
 23,249,b,2010,b,a,4-a,T2/ds10ba.doc,na,"\begin{itemize}
     \item In this question, we analyze a new deterministic algorithm for the Selection problem. The algorithm selects the k-th largest element from a set A consisting of n different elements.
     \item If \( n < 100 \), the algorithm sorts the n elements and returns the k-th largest element.
@@ -651,7 +651,7 @@ We can now establish a relation between \( r \) and \( n \). Since \( r \) is th
 
 Therefore, in each step of the algorithm, after comparing with x, we have \( r \leq (3/5)n \) which can be written as \( r \geq 0.6n + O(1) \).
 
-So, the largest \( a \) for which it always holds that \( r \geq an + O(1) \) is \( a = 0.6 \).",no,yes,"[['contradiction'], ['entailment']]"
+So, the largest \( a \) for which it always holds that \( r \geq an + O(1) \) is \( a = 0.6 \).",no,yes,"[['contradiction'], ['entailment']]",no
 24,250,b,2010,b,a,4-b,T2/ds10ba.doc,na,"\documentclass{article}
 \begin{document}
 
@@ -688,7 +688,7 @@ If $k\leq r$, the algorithm finds, by a recursive call, the k-th largest element
 You can ignore partition issues. (It is possible, when convenient, to assume that $n$ is divisible by 4, that $m$ is divisible by 5, and so on.)
 What is the smallest $b$ such that $r\leq bn+O(1)$ always holds? Prove your answer.
 
-\end{document}",question,,"[['contradiction'], ['contradiction']]"
+\end{document}",question,,"[['contradiction'], ['contradiction']]",
 25,251,b,2010,b,a,4-c,T2/ds10ba.doc,na,"
 In this question, we will analyze a new deterministic algorithm for the selection problem. The algorithm selects the k-th largest element from a set \( A \) with \( n \) distinct elements.
 
@@ -713,7 +713,7 @@ T(n/4) + T(7n/10) + O(n) & \text{if } n \geq 100
 \]
 
 Here, the recurrence relation states that if the number of elements in set \( A \) is less than 100, the algorithm sorts the elements which takes \( O(n \log n) \) time. 
-If the number of elements is greater than or equal to 100, the algorithm divides the elements into quartets and selects the third largest element from each quartet (creating set \( B \)), then recursively selects the \((2/5)m\)-th largest element (\( x \)), compares \( x \) to all elements in \( A \), partitions based on \( x \), and makes two recursive calls to find the desired element in the partitions. The time complexity for these operations is represented by the recurrence relation \( T(n/4) + T(7n/10) + O(n) \).",yes,yes,"[['neutral'], ['neutral']]"
+If the number of elements is greater than or equal to 100, the algorithm divides the elements into quartets and selects the third largest element from each quartet (creating set \( B \)), then recursively selects the \((2/5)m\)-th largest element (\( x \)), compares \( x \) to all elements in \( A \), partitions based on \( x \), and makes two recursive calls to find the desired element in the partitions. The time complexity for these operations is represented by the recurrence relation \( T(n/4) + T(7n/10) + O(n) \).",yes,yes,"[['neutral'], ['neutral']]",n
 26,252,b,2010,b,a,4-d,T2/ds10ba.doc,na,"\documentclass{article}
 \begin{document}
 
@@ -752,7 +752,7 @@ If $k \leq r$, the algorithm finds, by a recursive call, the $k$-th largest elem
 Division issues can be ignored. (It is possible to assume for convenience that $n$ is divisible by 4, $m$ is divisible by 5, and so on.)
 What is the runtime of the algorithm (as a function of $n$)? (An asymptotic answer in terms of $O(.)$ is sufficient.)
 
-\end{document}",question,yes,"[['contradiction'], ['contradiction']]"
+\end{document}",question,yes,"[['contradiction'], ['contradiction']]",
 27,285,c,2012,a,a,1,T2/ds12-AA.doc,9,"\textbf{Given} an input consisting of $n$ distinct arbitrary integers, we are interested in sorting it. \textbf{It is also given} that the number of inversion pairs, denoted by $\frac{n(n-1)}{2}$, the number of number pairs that are in reverse relative order, is $I = \frac{n(n-1)}{2} - 5n$. A pair of elements $a_i$ and $a_j$ is inverted if $a_i < a_j$ and $i > j$.
 
 Choose the most correct answer (it is possible that among different options, the strongest correct one should be chosen).
@@ -781,7 +781,7 @@ Given that the number of inversion pairs is $I = \frac{n(n-1)}{2} - 5n$, we can 
 
 The most correct answer is \textbf{(a. A lower bound on the sorting time of the input is $\Omega(n \log n)$)}. This is because in the worst case scenario, when the number of inversion pairs is at its maximum, the input array is completely out of order and would require at least $\Omega(n \log n)$ comparisons to sort it using comparison-based sorting algorithms like Merge Sort or Quick Sort.
 
-Therefore, the correct answer is \textbf{a. A lower bound on the sorting time of the input is $\Omega(n \log n)$}.",no,yes,"[['contradiction'], ['entailment']]"
+Therefore, the correct answer is \textbf{a. A lower bound on the sorting time of the input is $\Omega(n \log n)$}.",no,yes,"[['contradiction'], ['entailment']]",no
 28,359,b,2007,b,a,4-a,T2/ds07b_moed_a_solution.doc,na,"In the string $S$, the letter $A$ appears one million times, the letter $B$ 100,000 times, and the letter $C$ 1,000 times. Draw the Huffman tree of the string and calculate the encoding length of the string according to this tree.",na,p,tested,,,"The encoding length is equal to:  
 \(10^6 + 2 \times 10^5 + 2 \times 10^3 = 1202000\)","To draw the Huffman tree of the string $S$, we first need to calculate the weight of each character based on their frequency.
 
@@ -814,7 +814,7 @@ To calculate the encoding length of the string according to this tree, we multip
 
 $1,000,000 \times 1 + 100,000 \times 2 + 1,000 \times 2 = 1,000,000 + 200,000 + 2,000 = 1,202,000$ bits
 
-Therefore, the encoding length of the string according to this tree is $1,202,000$ bits.",yes,yes,"[['entailment'], ['entailment']]"
+Therefore, the encoding length of the string according to this tree is $1,202,000$ bits.",yes,yes,"[['entailment'], ['entailment']]",yes
 29,365,b,2007,b,a,7-a,T2/ds07b_moed_a_solution.doc,na,"Mapping \( n \) elements using a universal hash function family to a table with \( m \) cells while resolving collisions by chaining. What is the expected number of pairs \((x, y)\) such that \(x\) and \(y\) are elements of the input, and both map to the same cell?",na,g,tested,,,"Answer: \(\Theta(\sqrt[3]{n})\). We number the elements from 1 to \(n\). Let \(X_{i,j}\) be a random variable that equals 1 if element number \(i\) collides with element number \(j\), and equals 0 otherwise. Let \(X\) be the sum of these variables. Then \(X\) equals the number of collisions. According to the linearity of expectation, \( \mathbb{E}[X] = \sum_{i<j} \mathbb{E}[X_{i,j}] \). The probability that two specific elements collide is \( \frac{1}{\text{number of slots}} \). Therefore, \( \mathbb{E}[X_{i,j}] = \frac{1}{m} \) and thus \( \mathbb{E}[X] = \binom{n}{2} \cdot \frac{1}{m} \).","To solve this problem, we need to calculate the expected number of pairs \((x, y)\) such that \(x\) and \(y\) are elements of the input and both map to the same cell when mapping \(n\) elements using a universal hash function family to a table with \(m\) cells while resolving collisions by chaining.
 
 Let \( X_i \) be the indicator random variable that is equal to 1 if there is a collision between elements \( x \) and \( y \) that hash to the same cell by the \( i \)th element to the table, and 0 otherwise. Then the total number of collisions between pairs of elements can be expressed as:
@@ -837,7 +837,7 @@ Substituting this into the formula for the total expected number of collisions, 
 \mathbb{E}[X] = \frac{1}{m} + \frac{2}{m} + \ldots + \frac{n-1}{m} = \frac{n(n-1)}{2m}
 \]
 
-Therefore, the expected number of pairs \((x, y)\) such that \(x\) and \(y\) are elements of the input and both map to the same cell is \( \frac{n(n-1)}{2m} \).",no,yes,"[['neutral'], ['neutral']]"
+Therefore, the expected number of pairs \((x, y)\) such that \(x\) and \(y\) are elements of the input and both map to the same cell is \( \frac{n(n-1)}{2m} \).",no,yes,"[['neutral'], ['neutral']]",n
 30,404,c,2011,a,a,4,T2/ds11AAsol.pdf,9,"\text{We implemented a binary search tree (not necessarily balanced) on } n \text{ elements. Let } k \text{ denote the number of elements in the tree for which the find operation takes constant time (i.e., independent of } n\text{). What is } k\text{?} \\
 \text{A. } k=1 \\
 \text{B. } k=O(1) \\
@@ -853,7 +853,7 @@ Given that the height of a binary search tree can vary from O(log n) to O(n), th
 
 Therefore, the correct answer is:
 
-\fbox{A. } k=1",no,yes,"[['contradiction'], ['neutral']]"
+\fbox{A. } k=1",no,yes,"[['contradiction'], ['neutral']]",
 31,405,c,2011,a,a,5,T2/ds11AAsol.pdf,10,"\textbf{We want to color the nodes of a full binary search tree (i.e., each node has two children) in red and black, so that the coloring adheres to the rules of a red-black tree. Which of the following conditions is a sufficient condition for such a coloring to exist?}
 A. All leaves are at the same distance from the root.  
 B. The largest distance from the root to a leaf is at most twice the smallest distance from the root to a leaf.  
@@ -862,7 +862,7 @@ D. Answers A and B are correct.
 E. Answers A and C are correct.  
 F. No answer is correct.",A,e,tested,,,"\textbf{Answer A:} We will paint the entire tree black. It is possible to construct a tree that contradicts B, therefore D is not correct.","The correct answer is:
 
-\textbf{E. Answers A and C are correct.}",no,yes,"[['neutral'], ['neutral']]"
+\textbf{E. Answers A and C are correct.}",no,yes,"[['neutral'], ['neutral']]",n
 32,408,c,2011,a,a,8,T2/ds11AAsol.pdf,9,"Let \( A \) be an array of \( N \) numbers. Let the number at the i-th position be denoted as \( A_i \). We say there is an inversion between \( A_i \) and \( A_j \) if \( i < j \) and \( A_i > A_j \). Let \( I \) denote the number of inversions in the array.
 
 What is the runtime of the most efficient algorithm that takes \( A \) and returns the number of inversions, i.e., \( I \)? Choose the tightest upper bound for the runtime of the algorithm:
@@ -878,7 +878,7 @@ Justify your answer.",E,a,tested,,,"\textbf{Solution H'.} In the lecture, we saw
 
 This can be justified by observing that the most common algorithm for counting inversions is based on the merge sort algorithm. In the merge sort algorithm, the array is repeatedly divided into halves until individual elements are reached, and then these halves are merged back together in sorted order. During the merging process, the number of inversions can be efficiently counted in \( O(N) \) time.
 
-Since the merge sort algorithm has a time complexity of \( O(N \log N) \) for sorting, and the inversion count can be performed during the merging process in \( O(N) \) time, the overall runtime of the algorithm for counting inversions is \( O(N \log N) \). This justifies why option C, \( O(N \log N) \), is the tightest upper bound for the runtime of the algorithm.",no,yes,"[['neutral'], ['neutral']]"
+Since the merge sort algorithm has a time complexity of \( O(N \log N) \) for sorting, and the inversion count can be performed during the merging process in \( O(N) \) time, the overall runtime of the algorithm for counting inversions is \( O(N \log N) \). This justifies why option C, \( O(N \log N) \), is the tightest upper bound for the runtime of the algorithm.",no,yes,"[['neutral'], ['neutral']]",n
 33,409,b,2011,a,a,9-a,T2/ds11AAsol.pdf,2,"The deterministic ""select"" algorithm operates as follows:
 a. The array is divided into groups of size 5.
 b. Each group is sorted.
@@ -898,7 +898,7 @@ For the ""select"" algorithm with groups of size \(\log(n)\), the total running 
 T(n) = O(n) + \log(n) (n / \log(n) \log(\log(n)) + \log(n))
 \]
 
-The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes,"[['neutral'], ['entailment']]"
+The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes,"[['neutral'], ['entailment']]",
 34,411,b,2011,a,a,9-c,T2/ds11AAsol.pdf,8,"The ""select"" deterministic algorithm operates as follows:
 a. The array is divided into groups of size 5.
 b. Each group is sorted.
@@ -917,7 +917,7 @@ d. Performing Partition using the median of medians pivot will take \(O(n)\) tim
 Therefore, the total runtime of the algorithm will be \(O(n) + O(\log(n)) + O(n) = O(n) + O(n) = O(n)\).
 
 The total cost of the algorithm will be the sum of the costs of each step: 
-\[O(n) + O(\log(n)) + O(n) + O(n) = O(n) + O(\log(n))\]",no,yes,"[['neutral'], ['entailment']]"
+\[O(n) + O(\log(n)) + O(n) + O(n) = O(n) + O(\log(n))\]",no,yes,"[['neutral'], ['entailment']]",no
 35,425,b,2011,a,b,11-a,T2/ds11-AB.pdf,2,"The deterministic ""select"" algorithm, which we studied in class, works as follows:
 a. The array is divided into groups of size 5
 b. Sort each group
@@ -932,7 +932,7 @@ Cost:
 Explanation:",na,m,tested,,,"\text{Cost: } O(N) \\
 \text{Explanation: Sorting each triplet is fixed, and there are } N/3 \text{ triplets.}","The cost of step b is the cost of sorting each group of size 3. Since the worst-case time complexity of sorting a group of size 3 is O(3log(3)) = O(3), the cost of step b is O(n) where n is the number of elements in the array. 
 
-Explanation: In step b, we are sorting each group of size 3. The worst-case time complexity of sorting a group of size 3 is O(3log(3)) = O(3) because there are 3 elements in each group. Since there are n/3 groups in the array (where n is the number of elements in the array), the total cost of step b is O(n/3 * 3) = O(n).",yes,yes,"[['neutral'], ['neutral']]"
+Explanation: In step b, we are sorting each group of size 3. The worst-case time complexity of sorting a group of size 3 is O(3log(3)) = O(3) because there are 3 elements in each group. Since there are n/3 groups in the array (where n is the number of elements in the array), the total cost of step b is O(n/3 * 3) = O(n).",yes,yes,"[['neutral'], ['neutral']]",n
 36,426,b,2011,a,b,11-b,T2/ds11-AB.pdf,2,"\textbf{The deterministic ""select"" algorithm, which we studied in class, operates as follows:}  
 a. The array is divided into groups of size 5  
 b. Each group is sorted  
@@ -955,7 +955,7 @@ If we have groups of size 3, then for each group to find the median, we need to 
 
 If there are \( \frac{N}{3} \) groups in the array of size \( N \), the total cost of finding medians within each group would be \( 2 \times \frac{N}{3} = \frac{2N}{3} \).
 
-Therefore, the cost of step c, expressed in terms of \( T \), is \( \frac{2N}{3} \).",no,yes,"[['neutral'], ['entailment']]"
+Therefore, the cost of step c, expressed in terms of \( T \), is \( \frac{2N}{3} \).",no,yes,"[['neutral'], ['entailment']]",no
 37,429,b,2011,a,b,12-b,T2/ds11-AB.pdf,6,"\textit{Given an array of size \( n \), divided into \( n/k \) segments, each of length \( k \). It is known that for any two of the \( k \) segments, either all the elements in the first segment are smaller than all the elements in the second segment, or all the elements in the first segment are larger than all the elements in the second segment.
 We are interested in a sorting algorithm for arrays of this type, suitable for the comparison model, as well as a lower bound for sorting algorithms in the comparison model for arrays of this type.
 Propose the best possible lower bound (as a function of \( n \) and \( k \)) and prove it.}",na,k,tested,,,"The number of possible arrangements is \((k!)^{(n/k)} \cdot (n/k)!\).
@@ -984,7 +984,7 @@ Since \( e \approx 2.71828 \) and \( \pi \approx 3.14159 \), we can simplify thi
 N\log_2(N) - 1.4427N + 0.9074\log_2(N) \approx N\log_2(N)
 \]
 
-Therefore, the best possible lower bound for sorting arrays of this type in the comparison model is \( O(N\log_2(N)) \) comparisons.",maybe,yes,"[['neutral'], ['neutral']]"
+Therefore, the best possible lower bound for sorting arrays of this type in the comparison model is \( O(N\log_2(N)) \) comparisons.",maybe,yes,"[['neutral'], ['neutral']]",n
 38,430,b,2011,a,b,12-c,T2/ds11-AB.pdf,6,"\[
 \text{Given an array of size } n, \text{ divided into } \frac{n}{k} \text{ segments, each of length } k. \text{ It is known that for any two of the } k \text{ segments, either all the elements in the first segment are smaller than all the elements in the second segment, or all the elements in the first segment are larger than all the elements in the second segment.}
 \]
@@ -1014,7 +1014,7 @@ Therefore, the best possible lower bound for sorting arrays of this type in the 
 
 \[
 \text{For this type of array, where we have strict ordering constraints between segments, this algorithm is more efficient compared to traditional comparison-based sorting algorithms like quicksort or merge sort which have a worst-case time complexity of } O(n \log n). 
-\]",no,yes,"[['neutral'], ['neutral']]"
+\]",no,yes,"[['neutral'], ['neutral']]",n
 39,431,c,2011,b,a,1,T2/ds11-BA-sol.pdf,10,"\begin{enumerate}
     \item A Fibonacci heap is given as learned in class. It is given that it is empty. We perform n insert operations and then two del-min operations. You need to choose the answer that contains:
     \begin{enumerate}
@@ -1052,7 +1052,7 @@ will take \(O(n)\) because each element is in its own tree.","\begin{enumerate}
     \item [D.] First w.c $O(\log n)$ Second w.c $O(1)$
     \item [E.] First w.c $O(n)$ Second w.c $O(\log n)$
     \item [F.] First w.c $O(n)$ Second w.c $O(1)$
-\end{itemize}",question,yes,"[['neutral'], ['contradiction']]"
+\end{itemize}",question,yes,"[['neutral'], ['contradiction']]",
 40,432,c,2011,b,a,2,T2/ds11-BA-sol.pdf,3,"The students were asked to design a new deterministic (non-random) sorting algorithm using comparisons and construct its comparison tree. The number of items to sort is \(N\) and they are all different from each other.
 
 Student A proposed Algorithm A and constructed Tree A for it. The number of leaves in the tree is \(2^{(N \log \log N)}\).  
@@ -1072,7 +1072,7 @@ Algorithm C has a comparison tree with \(N!\) leaves. In the worst case scenario
 
 The height of a full binary tree with \(N!\) leaves is \(O(\log(N!)) = O(N \log N)\).
 
-Therefore, the number of comparisons in the worst case of Algorithm C is indeed \(O(N \log N\)), making statement a. ""The statement is always true"" the correct choice.",no,yes,"[['neutral'], ['neutral']]"
+Therefore, the number of comparisons in the worst case of Algorithm C is indeed \(O(N \log N\)), making statement a. ""The statement is always true"" the correct choice.",no,yes,"[['neutral'], ['neutral']]",n
 41,434,c,2011,b,a,4,T2/ds11-BA-sol.pdf,4,"The students were asked to design a new deterministic sorting algorithm (not random) using comparisons and to build its comparison tree. The number of elements to sort is \( N \) and they are all different from each other.
 
 Student A proposed Algorithm A and built Tree A for it. The number of leaves in the tree is \( 2^{N \log \log N} \).  
@@ -1095,7 +1095,7 @@ Now, let's consider Algorithm A. The fact that Tree A has \(2^{N \log \log N}\) 
 
 Therefore, the correct answer is:
 
-\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes,"[['neutral'], ['contradiction']]"
+\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes,"[['neutral'], ['contradiction']]",
 42,435,c,2011,b,a,5,T2/ds11-BA-sol.pdf,10,"Two binary heaps are given: heap 1 with \( n_1 \) elements, and heap 2 with \( n_2 \) elements. 
 Also, it is given that \( n_1 = n_2^2 \). 
 Each heap is maintained in an infinite array. What is the best running time for merging the two heaps, that is, an operation that results in one array (it can be one of the heap arrays, there is no need to preserve the original heaps) containing all the elements, such that they represent a heap?
@@ -1111,7 +1111,7 @@ To merge the two heaps, we can simply concatenate the two arrays into one array 
 
 Additionally, after merging the arrays, we can apply a heapifying algorithm to reorder the elements in the array such that it forms a valid heap. This heapifying operation will have a time complexity of \( O(n) \) where \( n \) is the number of elements in the array.
 
-Therefore, the overall best running time for merging the two heaps will be \( O(n_1 + n_2) \).",no,yes,"[['neutral'], ['neutral']]"
+Therefore, the overall best running time for merging the two heaps will be \( O(n_1 + n_2) \).",no,yes,"[['neutral'], ['neutral']]",n
 43,436,c,2011,b,a,6,T2/ds11-BA-sol.pdf,10,"\begin{enumerate}
     \item To remind you, the select(k) selection algorithm we learned in class operates as follows:
     \begin{enumerate}
@@ -1143,7 +1143,7 @@ Justification:
 - For $\epsilon \leq 0.4$ and $\epsilon \leq 0.9$, the likelihood of choosing non-median elements in most of the fives is too high, leading to incorrect results.
 - For $\epsilon \leq 1$, which means a non-median element is chosen from every five, the algorithm will not work correctly.
 
-Therefore, the correct answer is $\epsilon \leq 0.2$.",yes,yes,"[['neutral'], ['contradiction']]"
+Therefore, the correct answer is $\epsilon \leq 0.2$.",yes,yes,"[['neutral'], ['contradiction']]",no
 44,438,c,2011,b,a,8,T2/ds11-BA-sol.pdf,3,"\noindent We want to implement a dictionary with the operations Search(), Delete(), Insert() on elements whose keys are integers. We will choose one of the implementations as we have seen them in class. Determine whether the statement is true or false and justify. 
 
 \noindent Statement: 
@@ -1168,7 +1168,7 @@ b. False
 
 \textbf{Solution:}
 
-False. When it is important to have the lowest worst-case runtime for operations, implementing with a balanced binary search tree (such as AVL tree, Red-Black tree) is preferable over a hash table. In a balanced binary search tree, the worst-case time complexity for \texttt{Search()}, \texttt{Delete()}, and \texttt{Insert()} operations is $O(\log n)$. On the other hand, while hash tables have an average-case time complexity of $O(1)$, the worst-case time complexity can be $O(n)$ if there are collisions. This makes hash tables less preferable when considering worst-case scenarios.",yes,yes,"[['contradiction'], ['neutral']]"
+False. When it is important to have the lowest worst-case runtime for operations, implementing with a balanced binary search tree (such as AVL tree, Red-Black tree) is preferable over a hash table. In a balanced binary search tree, the worst-case time complexity for \texttt{Search()}, \texttt{Delete()}, and \texttt{Insert()} operations is $O(\log n)$. On the other hand, while hash tables have an average-case time complexity of $O(1)$, the worst-case time complexity can be $O(n)$ if there are collisions. This makes hash tables less preferable when considering worst-case scenarios.",yes,yes,"[['contradiction'], ['neutral']]",no
 45,439,c,2011,b,a,9,T2/ds11-BA-sol.pdf,3,"We want to implement a dictionary with the operations Search(), Delete(), and Insert() on elements whose keys are integers. We will choose one of the implementations, as we saw them in class. Determine for the statement whether it is true or false and justify.
 
 Statement:
@@ -1183,7 +1183,7 @@ A hash table asymptotically improves the expected runtime, but not the other two
 False
 
 \textbf{Justification:} 
-For minimizing memory space, a hash table may not always be the best option. While a hash table can offer O(1) average case time complexity for search, delete, and insert operations, it may require more memory space than a balanced binary search tree. A hash table needs additional memory for its underlying array, which can lead to memory wastage especially when the hash table is not filled up to its full capacity. On the other hand, a balanced binary search tree optimizes memory usage by maintaining a balanced structure, which can save memory space compared to a hash table. Therefore, in terms of memory space optimization, the implementation with a balanced binary search tree may be preferable over a hash table.",yes,maybe,"[['neutral'], ['entailment']]"
+For minimizing memory space, a hash table may not always be the best option. While a hash table can offer O(1) average case time complexity for search, delete, and insert operations, it may require more memory space than a balanced binary search tree. A hash table needs additional memory for its underlying array, which can lead to memory wastage especially when the hash table is not filled up to its full capacity. On the other hand, a balanced binary search tree optimizes memory usage by maintaining a balanced structure, which can save memory space compared to a hash table. Therefore, in terms of memory space optimization, the implementation with a balanced binary search tree may be preferable over a hash table.",yes,maybe,"[['neutral'], ['entailment']]",yes
 46,449,b,2011,b,a,14-d,T2/ds11-BA-sol.pdf,5,"\text{We implement a binary counter with } n \text{ bits. The counter is initialized to the value } 0...00. \text{ The operation} \\
 \text{Inc advances the counter, meaning it increases its value by 1 in the following manner. The operation} \\
 \text{systematically searches for the rightmost 0, changes it to 1, and changes all the 1's to its right to 0.} \\
@@ -1202,7 +1202,7 @@ Explanation:
 - However, when we perform the second Inc operation, the cost is only 1 (changing 1 bit from 0 to 1).
 - Adding up the costs of both operations (4 + 1), we get a total cost of 5.
 - Since the total cost of the Double-Inc operation is 5, and we are performing 2 increment operations in sequence, the amortized cost of each increment operation is 5/2 = 2.5.
-- Therefore, the amortized cost of the Double-Inc operation is 5.",no,yes,"[['contradiction'], ['entailment']]"
+- Therefore, the amortized cost of the Double-Inc operation is 5.",no,yes,"[['contradiction'], ['entailment']]",no
 47,480,c,2013,b,a,4,T2/ds13BA-sol.pdf,5,"Define a binary counter with the operation increment(i). The counter is implemented by an infinite array of bits, starting from index 0, with the least significant bit at position 0 (defined as the right side of the array). The operation increment(i) increases the value on the counter by 2^i. The implementation of the operation is as follows: Starting from position i in the array, change all consecutive 1s starting at i and extending left to 0, and change the first 0 to the left of these consecutive 1s to 1 (pseudocode follows). For example: if the array contains the value ...01101011101 and increment(2) is performed, the new value will be ...01101100001. Assume that we started with a counter with value 0 and performed n Increment(j) operations with arbitrary values of j. After that, perform increment(i). What is the amortized time for an increment(j) operation? Let n denote the number of increment(j) operations performed on the structure (running Increment operations with arbitrary values of j).
 
 Increment(A, i) 
@@ -1229,7 +1229,7 @@ Justification:
 - Since we performed n increment(j) operations before performing an increment(i) operation, the total complexity for n increment(j) operations will be O(n*logn). 
 - As a result, the amortized time complexity for each increment(j) operation will be O(logn). 
 
-Therefore, the most correct answer is d. O(logn).",no,yes,"[['entailment'], ['neutral']]"
+Therefore, the most correct answer is d. O(logn).",no,yes,"[['entailment'], ['neutral']]",no
 48,481,c,2013,b,a,5,T2/ds13BA-sol.pdf,5,"\textit{A graph} \(G = (V, E)\) \textit{contains vertices} \(v_1, \ldots, v_n\) \textit{and} \(m\) \textit{edges, which are pairs} \((v_i, v_j)\). \textit{Assume that each vertex and edge can be accessed in} \(O(1)\). \textit{Let} \(A\) \textit{be an algorithm that uses the data structure union-find. The algorithm is as follows:}
 1. \textit{For each vertex from} \(i=1\) \textit{perform} \(\text{make-set}(v_i)\)
 2. \textit{For each edge: check if} \(\text{find}(v_i) = \text{find}(v_j)\). \textit{If not, perform} \(\text{Union}(v_i, v_j)\).
@@ -1244,7 +1244,7 @@ f. \(m\)",D,n,tested,,,"\textbf{Answer:} \\
 
 Therefore, the tight upper bound on the number of union operations performed during the execution of algorithm \(A\) is \(n-1\).
 
-\textbf{Answer: d. \(n-1\)}",yes,yes,"[['entailment'], ['entailment']]"
+\textbf{Answer: d. \(n-1\)}",yes,yes,"[['entailment'], ['entailment']]",yes
 49,491,c,2013,b,a,15,T2/ds13BA-sol.pdf,3,"\textbf{A ""nearly sorted"" array is defined as follows: each element in the array is within a distance of up to logn places from its sorted position in the array.}
 \textbf{What can be said about the running time of finding the median element in the array? Mark A true / B false and justify your answer.}
 \textbf{It is possible to find the median using a binary search in the array, and therefore the running time is O(logn)}
@@ -1260,7 +1260,7 @@ Binary search will not help – the array is not sorted.","The justification wil
 
 In a nearly sorted array where each element is within a distance of up to logn places from its sorted position, the binary search algorithm to find the median element may not result in a time complexity of O(logn). This is because even though the elements are close to their correct positions, the median element may not necessarily be in the middle of the array. 
 
-Due to the unique positioning of elements in a nearly sorted array, the binary search may not converge to the median in O(logn) time in all cases. Therefore, it is not always possible to find the median using binary search in O(logn) time in a nearly sorted array.",yes,yes,"[['contradiction'], ['entailment']]"
+Due to the unique positioning of elements in a nearly sorted array, the binary search may not converge to the median in O(logn) time in all cases. Therefore, it is not always possible to find the median using binary search in O(logn) time in a nearly sorted array.",yes,yes,"[['contradiction'], ['entailment']]",no
 50,493,c,2013,b,a,17,T2/ds13BA-sol.pdf,3,"Define an ""almost sorted"" array as follows: each element in the array is up to logn positions away from its position in a sorted array.
 What can be said about the runtime for finding the median element in the array? Mark A for correct or B for incorrect and justify your answer.
 It is possible to reduce the search space to O(logn) possibilities and find the median in linear time, thus the search time is O(logn).
@@ -1271,13 +1271,13 @@ a. Correct \\
 The median does not deviate more than \(\log n\)","A. Correct
 
 \textbf{Justification:} 
-Since the array is almost sorted, we can use the concept of binary search to reduce the search space to O(logn) possibilities. This is because we can compare the median element with the desired median and then move the search space either to the left or right depending on the comparison result. This allows us to find the median element in linear time, making the search time O(logn).",yes,yes,"[['neutral'], ['neutral']]"
+Since the array is almost sorted, we can use the concept of binary search to reduce the search space to O(logn) possibilities. This is because we can compare the median element with the desired median and then move the search space either to the left or right depending on the comparison result. This allows us to find the median element in linear time, making the search time O(logn).",yes,yes,"[['neutral'], ['neutral']]",n
 51,495,c,2013,b,a,19,T2/ds13BA-sol.pdf,3,"\textbf{Define an ""almost sorted"" array as follows: each element is at a distance of up to \(\log n\) places from its location in a sorted array. What can be said about the running time for finding the median in the array? Mark A' true / B' false and justify your answer. It is necessary to go through at least \(\Omega(\log n)\) elements in order to find the median, and thus the running time is \(\Omega(\log n)\).} \\
 \textbf{A. True} \\
 \textbf{B. False} \\
 Justification:",A,k,tested,,,"\textbf{Answer:} \\
 a. True \\
-The elements are not sorted.","The statement is false. In an ""almost sorted"" array where each element is at most \(\log n\) places away from its correct position, we can still find the median in \(O(\log n)\) time using algorithms like quickselect or heaps. Therefore, we do not necessarily need to go through \(\Omega(\log n)\) elements to find the median in this case.",no,yes,"[['contradiction'], ['neutral']]"
+The elements are not sorted.","The statement is false. In an ""almost sorted"" array where each element is at most \(\log n\) places away from its correct position, we can still find the median in \(O(\log n)\) time using algorithms like quickselect or heaps. Therefore, we do not necessarily need to go through \(\Omega(\log n)\) elements to find the median in this case.",no,yes,"[['contradiction'], ['neutral']]",yes
 52,496,c,2013,b,a,20,T2/ds13BA-sol.pdf,3,"\begin{enumerate}
     \item Answer true or false to the following statement. (Mark 'a' for true / 'b' for false)
     \item Given only pre-order and post-order traversals, a general binary tree can be uniquely reconstructed.
@@ -1296,14 +1296,14 @@ b. Incorrect \\
         \item b. False
     \end{itemize}
     \item Brief justification:
-\end{enumerate}",question,yes,"[['contradiction'], ['contradiction']]"
+\end{enumerate}",question,yes,"[['contradiction'], ['contradiction']]",
 53,574,C,2016,a,b,5-a,T3/ds16AB-sol.pdf,na,"We want to color the nodes of a full binary search tree (i.e., every non-leaf node has exactly two children) in red and black, so that the coloring satisfies the rules of a red-black tree.
 For each of the following statements, state whether it is true or false. Justify your answer.
 A. If all the leaves are at the same distance from the root, then such a coloring necessarily exists. True / False.",1,"e,f",tested,"אנחנו רוצים לצבוע את הצמתים של עץ חיפוש בינארי מלא (כלומר, לכל צומת שאינו עלה יש בדיוק שני בנים) באדום ובשחור, כך שהצביעה תקיים את הכללים של עץ אדום-שחור.
 כתב/י עבור כל אחת מהטענות הבאות האם היא נכונה או לא נכונה. נמק/י את תשובתך.
 א. אם כל העלים נמצאים באותו מרחק מהשורש, אז בהכרח קיימת צביעה כזאת. נכון / לא נכון.","נימוק: במקרה זה מדובר בעצם שלם. צביעת כל הצמתים בשחור, היא צביעה חוקית.","\textit{Reasoning: In this case, it is a whole entity. Coloring all the nodes in black is a legal coloring.}","We can represent a full binary search tree with all leaves at the same distance from the root by a perfect binary tree. In a perfect binary tree, the number of black nodes from the root to any leaf is the same for all leaves. Therefore, it is indeed possible to color the nodes of a full binary search tree with all leaves at the same distance from the root in red and black so that the coloring satisfies the rules of a red-black tree.
 
-Therefore, the statement is True.",yes,yes,"[['neutral'], ['neutral']]"
+Therefore, the statement is True.",yes,yes,"[['neutral'], ['neutral']]",n
 54,576,C,2016,a,b,5-c,T3/ds16AB-sol.pdf,na,"\text{We want to color the vertices of a full binary search tree (i.e., every non-leaf vertex has exactly two children) in red and black so that the coloring satisfies the rules of a red-black tree. Write for each of the following claims whether it is true or not true. Justify your answer.} \\
 \text{c. If the depth of the right subtree of the root is at most twice the depth of the left subtree of the root. True / Not true}",FALSE,"e,f",tested,"אנחנו רוצים לצבוע את הצמתים של עץ חיפוש בינארי מלא (כלומר, לכל צומת שאינו עלה יש בדיוק שני בנים) באדום ובשחור, כך שהצביעה תקיים את הכללים של עץ אדום-שחור.
 כתב/י עבור כל אחת מהטענות הבאות האם היא נכונה או לא נכונה. נמק/י את תשובתך.
@@ -1324,7 +1324,7 @@ We need to demonstrate that we can color the vertices of a full binary search tr
 
 Since a full binary search tree is balanced, we can achieve this by coloring the nodes such that the left subtree is entirely black and the right subtree has only red nodes alternating with black nodes. This coloring satisfies the claim while still maintaining the rules of a red-black tree.
 
-Therefore, the claim is \text{true}.",no,yes,"[['neutral'], ['neutral']]"
+Therefore, the claim is \text{true}.",no,yes,"[['neutral'], ['neutral']]",n
 55,594,B,2017,a,a,1-a,T3/ds17AA-sol.pdf,na,"\begin{enumerate}
     \item Given an array containing n elements. The number of distinct elements is k (𝑛 ≤ 𝑘).
     \item Sort the following asymptotic orders without explanation (𝑛 ≤ 𝑘):
@@ -1347,7 +1347,7 @@ nlogn, n, nlogk, n+klogk, n^2","n^2, nlogn, nlogk, n+klogk,n","n^2, n\log{n}, n\
         \item $n + k \log k$,
         \item $n^2$
     \end{itemize}
-\end{enumerate}",question,yes,"[['entailment'], ['entailment']]"
+\end{enumerate}",question,yes,"[['entailment'], ['entailment']]",
 56,597,B,2017,a,a,1-d,T3/ds17AA-sol.pdf,na,"\text{Given an array containing } n \text{ elements. The number of distinct elements is } k \, (k \leq n). \\
 \text{d. Assume the elements are integers between } 1 \text{ and } n^4. \text{ Propose a deterministic algorithm to sort the array.}",na,"l,p",tested,"נתון מערך המכיל n איברים. מספר האיברים השונים הוא k (k ≤ n).
 ד. נניח כי האיברים הם מספרים שלמים בין 1 ל-n^4. הציעו אלגוריתם דטרמיניסטי למיון המערך.
@@ -1360,7 +1360,7 @@ nlogn, n, nlogk, n+klogk, n^2","n^2, nlogn, nlogk, n+klogk,n","n^2, n\log{n}, n\
 5. Traverse the given array in reverse order and place each element at its correct position in the temporary array, using the count array to determine the position.
 6. Copy the elements from the temporary array back to the original array to obtain the sorted array.
 
-By following these steps, we can successfully sort the array of n elements containing integers between 1 and n^4 using Counting Sort algorithm.",yes,yes,"[['neutral'], ['neutral']]"
+By following these steps, we can successfully sort the array of n elements containing integers between 1 and n^4 using Counting Sort algorithm.",yes,yes,"[['neutral'], ['neutral']]",n
 57,761,C,2014,B,C,14,T3/ds14bc-sol(vaad).pdf,5,"Given an array with numbers, the task is to find the longest contiguous subarray whose sum of elements is exactly equal to $0$. It is given that all the numbers are $1$ or $-1$. What is the best runtime for solving this problem?
 \begin{enumerate}
 \item $O(1)$
@@ -1383,7 +1383,7 @@ O(n^2) .ו ","רושמים מערך של סכומים חלקיים מהמיקו�
 
 We record an array of partial sums from the first position to the last. The list can be sorted in $O(n)$ since all the sums are between $-n$ to $n$. We look for a pair in the sorted list whose partial sum is identical, and for which the sum between the two elements is exactly 0. We search for the pair whose distance between its elements is the greatest.
 
-\end{document}",The best runtime for solving this problem is $O(n)$.,yes,yes,"[['contradiction'], ['neutral']]"
+\end{document}",The best runtime for solving this problem is $O(n)$.,yes,yes,"[['contradiction'], ['neutral']]",no
 58,792,B,2018,A,B,1-a,T3/ds18AB-Sol.pdf,3,"\textit{Given a series of n elements, what is the time complexity for finding the k smallest elements in the series (for k < n).}",na,m,tested,"בהינתן סדרה של n איברים, מה סיבוכיות הזמן למציאת k האיברים הקטנים בגודלם בסדרה (עבור k < n). ","סיבוכיות זמן: (n(O
 הסבר קצר: בעזרת אלגוריתם selection שראינו בכיתה ואז partition.","\textbf{Time complexity:} \(O(n)\) \\
 \textbf{Brief explanation:} Using a selection algorithm we saw in class and then partition.","To find the k smallest elements in a series of n elements, one common approach is to use a min heap data structure. The time complexity for this approach is O(n + k log n).
@@ -1404,7 +1404,7 @@ The time complexity analysis is as follows:
 - Removing the smallest element k times: O(k log n)
 - Total time complexity: O(n + k log n) 
 
-So, the time complexity for finding the k smallest elements in a series of n elements is O(n + k log n).",no,maybe,"[['neutral'], ['entailment']]"
+So, the time complexity for finding the k smallest elements in a series of n elements is O(n + k log n).",no,maybe,"[['neutral'], ['entailment']]",no
 59,795,C,2018,A,B,1-d,T3/ds18AB-Sol.pdf,2,"A sloppy minimum heap is a data structure similar to a heap, which instead of returning the minimum, returns one of the k smallest elements in the heap. Additionally, in the delete operation, it deletes the same element that it returned as the approximate minimum. The operations supported by the data structure (ADT) are:
 \begin{itemize}
     \item \texttt{Insert(x)} - insertion of a new element with key \(x\).
@@ -1428,7 +1428,7 @@ The find approximate minimum operation can be done in \(O(1)\) time by returning
 
 The delete approximate minimum operation can also be done in \(O(1)\) time by deleting the current approximate minimum element and updating it to be the next smallest element in the array.
 
-With this implementation, all operations in the ADT take amortized time \(O(1)\) for \(k=1\).",no,yes,"[['neutral'], ['entailment']]"
+With this implementation, all operations in the ADT take amortized time \(O(1)\) for \(k=1\).",no,yes,"[['neutral'], ['entailment']]",no
 60,796,C,2018,A,B,1-e,T3/ds18AB-Sol.pdf,5,"A sloppy minimum heap is a data structure similar to a heap, where instead of returning the minimum element, it returns one of the K smallest elements in the heap. Additionally, in the delete operation, it deletes the element that was returned as the approximate minimum. The operations supported by the ADT are:
 • \( \text{Insert}(x) \) - insertion of a new element with key \( x \).
 • \( \text{FindApproxMin}() \) - return an approximate minimum (an element among the k smallest elements).
@@ -1447,7 +1447,7 @@ A tango heap is a data structure that allows for constant time operations for in
 
 The tango heap maintains two separate heaps: a lazy heap and an active heap. The lazy heap is used for insert operations, while the active heap is used for find minimum and delete minimum operations. When the lazy heap size exceeds a certain threshold, the two heaps are swapped, and the lazy heap is merged into the active heap. This swapping and merging process allows for constant time complexity for all operations.
 
-By using a tango heap, we can implement the sloppy minimum heap such that all operations in the ADT take amortized \( O(1) \) time for \( k = n/100 \).",maybe,yes,"[['neutral'], ['entailment']]"
+By using a tango heap, we can implement the sloppy minimum heap such that all operations in the ADT take amortized \( O(1) \) time for \( k = n/100 \).",maybe,yes,"[['neutral'], ['entailment']]",
 61,797,B,2018,A,B,2-a,T3/ds18AB-Sol.pdf,3,"\begin{enumerate}
     \item Given a valid binary min-heap with $n$ elements, at which levels in the tree can the second smallest element be located?
     \item What is the minimum number of elements you would need to read in order to guarantee finding the second smallest element?
@@ -1459,7 +1459,7 @@ By using a tango heap, we can implement the sloppy minimum heap such that all op
 Minimum number of places: 2, the minimum element can only be at level 1 and at level 1 there are two elements.}","\begin{enumerate}
     \item The second smallest element in a binary min-heap with $n$ elements can be located at levels $1$ and $2$ in the tree.
     \item To guarantee finding the second smallest element, we would need to read at least $3$ elements. This is because the second smallest element could be located at level $2$, and in the worst case scenario, we would need to compare it with its parent and sibling. 
-\end{enumerate}",no,yes,"[['contradiction'], ['contradiction']]"
+\end{enumerate}",no,yes,"[['contradiction'], ['contradiction']]",yes
 62,798,B,2018,A,B,2-b,T3/ds18AB-Sol.pdf,2,"Given a valid binary minimum heap of n elements, on which levels of the tree can the third smallest element be placed?",na,h,tested,"בהינתן ערימת מינימום בינארית חוקית בת n איברים. באילו רמות בעץ יכול להיות ממוקם האיבר
 השלישי בקטן ביותר?",רמות: ברמה 1 או 2 .,\text{Levels: Level 1 or 2.},"To find the levels on which the third smallest element can be placed in a valid binary minimum heap of n elements, we first need to understand the structure of a binary minimum heap.
 
@@ -1471,7 +1471,7 @@ Now, let's analyze the levels of the tree where the third smallest element can b
 2. The second smallest element can be at level 1, either as the left child or the right child of the root.
 3. The third smallest element can be at level 2 since it must be larger than the smallest and second smallest elements.
 
-Therefore, the third smallest element can be placed on levels 2 in a valid binary minimum heap of n elements.",no,yes,"[['neutral'], ['entailment']]"
+Therefore, the third smallest element can be placed on levels 2 in a valid binary minimum heap of n elements.",no,yes,"[['neutral'], ['entailment']]",no
 63,800,C,2018,A,B,3,T3/ds18AB-Sol.pdf,7,"Given an array of size \( n \) of elements \((\text{key}, \text{value})\) where the number of distinct keys in the array is \( k \) (i.e., if we convert the keys in the array into a set, the set will be of size \( k \)). We want to sort the array in the comparison model so that the sorting will be stable.
 Reminder: A sort is called stable if it maintains the order of elements with the same key after sorting.
 Note: Without addressing stability in the explanation of the solution, only partial credit will be given.
@@ -1492,7 +1492,7 @@ b. When \( k = \log n \), the array can be stably sorted in time \( O(n \log \lo
 
 c. When \( k = n / \log n \), the array can be stably sorted with complexity \( O(n) \) on average using a hash table.
 
-d. When \( k = n \), the array can be stably sorted with complexity \( O(n \log \log n) \) on average using a hash table.",question,yes,"[['contradiction'], ['entailment']]"
+d. When \( k = n \), the array can be stably sorted with complexity \( O(n \log \log n) \) on average using a hash table.",question,yes,"[['contradiction'], ['entailment']]",
 64,801,C,2018,A,B,4-a,T3/ds18AB-Sol.pdf,4,"\begin{quote}
 After looking at the hash table using the chaining method, we thought it would be a good idea to change our choice of data structure (from a linked list to another data structure) to achieve better asymptotic complexity for insertion, search, and deletion from the hash table, even in the worst case (for any load factor), and on average (for load factor > 1). We denote load factor = \(\alpha\). Which data structure should we choose?
 
@@ -1510,7 +1510,7 @@ For achieving better asymptotic complexity for insertion, search, and deletion i
 
 \textbf{C. Array-based list that doubles in size.} 
 
-By choosing an array-based list that doubles in size when needed, we can achieve \(O(1)\) amortized complexity for insertion, search, and deletion operations, which is optimal for hash tables. The dynamic resizing strategy ensures that the load factor remains below a certain threshold, preventing performance degradation due to clustering or collisions.",no,yes,"[['neutral'], ['neutral']]"
+By choosing an array-based list that doubles in size when needed, we can achieve \(O(1)\) amortized complexity for insertion, search, and deletion operations, which is optimal for hash tables. The dynamic resizing strategy ensures that the load factor remains below a certain threshold, preventing performance degradation due to clustering or collisions.",no,yes,"[['neutral'], ['neutral']]",n
 65,803,C,2018,A,B,4-c,T3/ds18AB-Sol.pdf,4,"After looking at the hash table using the Chaining method, we thought it would be advisable to change our data structure choice (from a linked list to another data structure) in order to achieve better asymptotic complexity for insertion, search, and deletion from the hash table, even in the worst case (for any load factor), and also on average (for a load factor > 1). Let us denote load factor = \(\alpha\). What is the average complexity of insertion/search/deletion, depending on \(\alpha = \text{load factor}\)? (The tightest answer.)
 
 A. \(O(\log \log \alpha)\)
@@ -1525,7 +1525,7 @@ D. \(O(\log \alpha)\)",d,"a,d,f,g,h",tested,"לאחר שהסתכלנו על טב
 A. \(O(\log \log \alpha)\)
 B. \(O(\alpha \log \alpha)\)
 C. \(O(\alpha)\)
-D. \(O(\log \alpha)\)",question,yes,"[['neutral'], ['entailment']]"
+D. \(O(\log \alpha)\)",question,yes,"[['neutral'], ['entailment']]",
 66,804,C,2018,A,B,5,T3/ds18AB-Sol.pdf,9,"\begin{quote}
 In class, we learned about a deterministic \textit{select} that performed a \textit{partition} using a \textit{pivot} chosen by the median-of-medians algorithm. Assume that instead of the aforementioned \textit{pivot}, you received a new algorithm called \textit{GoodPivot} that takes an array containing \( n \) keys and returns the value of the \( 0.05n \)-th smallest element. For example, on an array of size 1000, it will return the value of the 50th smallest key. \textit{GoodPivot} does not call \textit{select} (unlike the median-of-medians algorithm). Assume the running time of \textit{GoodPivot} is bounded by \( c_1 \times n \), and the running time of \textit{partition} is bounded by \( c_2 \times n \). We are interested in the cost of \textit{select} using \textit{GoodPivot}. Choose the tightest answer. The running time of the algorithm is bounded by:
 a. \( cn \)
@@ -1572,7 +1572,7 @@ T(n) &\leq T(n-1) + c_1 \cdot n + c_2 \cdot n \\
 
 Therefore, by induction, the cost of \textit{select} using \textit{GoodPivot} is \(O(n)\).
 
-The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes,"[['entailment'], ['entailment']]"
+The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes,"[['entailment'], ['entailment']]",
 67,805,C,2018,A,B,6-a,T3/ds18AB-Sol.pdf,5,"In order to improve \texttt{quicksort}, a new function \texttt{GreatPivot} has been created. It receives an array containing $n$ keys and returns a random value that is uniformly distributed among all key values that are greater than or equal to the $\lceil 0.05n \rceil$-th largest and less than or equal to the $\lfloor 0.95n \rfloor$-th largest element. The \texttt{partition} function performs the partitioning using this value. In other words, unlike \texttt{randpartition}, which selects a pivot randomly from all elements, this choice is restricted to only 90\% of the elements mentioned above.
 
 The cost of \texttt{greatpivot} is $O(1)$, and the cost of \texttt{partition} is linear. The time complexity of \texttt{quicksort} when using \texttt{partition} and \texttt{GreatPivot} is, in the worst case:
@@ -1589,7 +1589,7 @@ The cost of \texttt{greatpivot} is $O(1)$, and the cost of \texttt{partition} is
 ג. Θ(𝑛𝑙𝑜𝑔𝑛)
 ד. Θ(𝑛^2)","הסיבוכיות הינה: 𝜃(𝑛𝑙𝑜𝑔𝑛). הוכחה:
 עומק העץ חסום מלמעלה על ידי 𝑙𝑜𝑔1/0.95𝑛 ומלמטה על ידי 𝑙𝑜𝑔1/0.05𝑛 . כלומר בין העומקים האלו רוחב השכבה הוא חלקי. לכן חסמים של רוחב כולל של כל השכבות הינם 𝑛𝑙𝑜𝑔1/0.95𝑛 𝑛𝑙𝑜𝑔1/0.05𝑛","The complexity is: \( \theta(n \log n) \). Proof:  
-The depth of the tree is bounded from above by \(\log_{1/0.95} n\) and from below by \(\log_{1/0.05} n\). That is, between these depths, the width of the layer is partial. Therefore, the bounds on the total width of all layers are \(n \log_{1/0.95} n\) and \(n \log_{1/0.05} n\).",The time complexity of \texttt{quicksort} when using \texttt{partition} and \texttt{GreatPivot} in the worst case is $\Theta(n^2)$.,no,yes,"[['neutral'], ['neutral']]"
+The depth of the tree is bounded from above by \(\log_{1/0.95} n\) and from below by \(\log_{1/0.05} n\). That is, between these depths, the width of the layer is partial. Therefore, the bounds on the total width of all layers are \(n \log_{1/0.95} n\) and \(n \log_{1/0.05} n\).",The time complexity of \texttt{quicksort} when using \texttt{partition} and \texttt{GreatPivot} in the worst case is $\Theta(n^2)$.,no,yes,"[['neutral'], ['neutral']]",n
 68,807,B,2018,A,B,7-a,T3/ds18AB-Sol.pdf,6,"\documentclass{article}
 \begin{document}
 
@@ -1631,7 +1631,7 @@ If the ""emphasis"" condition is $5 < |\text{size}(A) - \text{size}(B)|$:
 1. What is the maximum cost of the \textit{union} operation? (Counted by the number of elements changing groups)
 2. What will be the complexity of $n$ \textit{union} operations? (Order of magnitude)
 
-\end{document}",question,yes,"[['neutral'], ['contradiction']]"
+\end{document}",question,yes,"[['neutral'], ['contradiction']]",
 69,808,B,2018,A,B,7-b,T3/ds18AB-Sol.pdf,6,"\begin{itemize}
     \item In class, we learned about Union-Find implemented with linked lists. In this implementation, the union operation was costly and the find operation was cheap.
     \item Reminder: In the union operation, the shorter list was merged into the longer one. Each list had a leader to which all elements of the list pointed. In the union operation, the algorithm iterated over all the elements of the shorter list and updated their pointer to the leader of the longer list. The find operation returned the leader in \( O(1) \) time.
@@ -1662,13 +1662,13 @@ For each element each transfer increases its group by factor of at least 6/5 so 
     \item The maximum cost of a union operation occurs when the condition for ""enforcement"" is met, i.e., \( \frac{\text{size}(A)}{\text{size}(B)} > 5 \) or \( \frac{\text{size}(A)}{\text{size}(B)} < \frac{1}{5} \). In this case, the shorter list (either \( A \) or \( B \)) is merged into the longer one. Therefore, the maximum cost would be equal to the size of the shorter list. The worst-case scenario is when the two lists have nearly equal sizes, and the size of the shorter list is around half of the larger list. So, the maximum cost of a union operation is approximately \( \frac{n}{2} \), where \( n \) is the total number of elements in the two lists.
     
     \item The complexity of \( n \) union operations will depend on the number of elements in each list and how they are merged. Since the maximum cost of a union operation is \( \frac{n}{2} \), and we perform \( n \) union operations, the overall complexity of \( n \) union operations would be \( O(n^2) \) in the worst case scenario. This is because each union operation may potentially iterate through almost all the elements in the two lists, resulting in a quadratic complexity.
-\end{enumerate}",no,yes,"[['entailment'], ['entailment']]"
+\end{enumerate}",no,yes,"[['entailment'], ['entailment']]",no
 70,809,C,2018,A,B,8-a,T3/ds18AB-Sol.pdf,3,"Alice ran the Perfect Hash algorithm learned in class (Two Level Hashing) on \( n > 100,000 \) keys. During the execution of the first part of the algorithm (creating the main table), Alice chose a function \( h_1 \) and discovered that the last \( 0.9n \) cells in the table are empty (we do not know what happened with the first cells). Answer True\False and justify: According to the algorithm, Alice can proceed to the second stage of the algorithm (creation of secondary level tables).",FALSE,g,tested,"אליס הריצה את האלגוריתם Perfect Hash שנלמד בכיתה ( Two Level Hashing ) על 𝑛>100,000 מפתחות. בהרצת החלק הראשון של האלגוריתם )יצירת הטבלה הראשית) בחרה אליס פונקציה ℎ1 וגילתה שכל 0.9𝑛 התאים האחרונים בטבלה ריקים (לא ידוע לנו מה קרה בתאים הראשונים). עני נכון\לא נכון ונמקי: על פי האלגוריתם אליס יכולה להמשיך לשלב השני של האלגוריתם (ייצור טבלאות ברמה השניה).","לא. הסבר: סכום הריבועים הינו לפחות 10n בערך. בוודאות גדול מ n . עפ האלגוריתם חוזרים על שלב 1 .
 col| >= (n/10)*(10*9/2) = n*9/2 > n       ->       algorithm will rpeat stage 1|.","\noindent No. Explanation: The sum of the squares is at least approximately $10n$. Definitely greater than $n$. According to the algorithm, return to step 1. $\text{col} \mid \geq \left(\frac{n}{10}\right) \left(\frac{10 \times 9}{2}\right) = \frac{9n}{2} > n \rightarrow \text{algorithm will repeat stage 1} \mid$.","\[
 \text{False.}
 \]
 
-Alice cannot proceed to the second stage of the algorithm because the load factor of the main table is too high. The load factor is calculated as \( \frac{n - 0.9n}{n} = 0.1 \), which means that 90% of the table is full. The algorithm requires that the load factor of the main table should be less than 0.5 to proceed to the second stage of the algorithm. Therefore, since the load factor is 0.1, Alice cannot proceed to the second stage.",maybe,maybe,"[['neutral'], ['neutral']]"
+Alice cannot proceed to the second stage of the algorithm because the load factor of the main table is too high. The load factor is calculated as \( \frac{n - 0.9n}{n} = 0.1 \), which means that 90% of the table is full. The algorithm requires that the load factor of the main table should be less than 0.5 to proceed to the second stage of the algorithm. Therefore, since the load factor is 0.1, Alice cannot proceed to the second stage.",maybe,maybe,"[['neutral'], ['neutral']]",n
 71,811,C,2018,A,B,8-c,T3/ds18AB-Sol.pdf,2,"Alice ran the Perfect Hash algorithm learned in class (Two Level Hashing) on 𝑛>100,000 keys. In running the first part of the algorithm (creating the main table), Alice chose a function ℎ1 and found that all 0.9𝑛 of the last slots in the table are empty (we do not know what happened in the first slots). Answer true\false and explain: In light of the results of the first stage, if Alice continues directly to the second stage, then the expected number of attempts to obtain good functions in the second stage will be greater than 10.",FALSE,g,tested,"אליס הריצה את האלגוריתם Perfect Hash שנלמד בכיתה ( Two Level Hashing ) על 𝑛>100,000 מפתחות. בהרצת החלק הראשון של האלגוריתם )יצירת הטבלה הראשית) בחרה אליס פונקציה ℎ1 וגילתה שכל 0.9𝑛 התאים האחרונים בטבלה ריקים (לא ידוע לנו מה קרה בתאים הראשונים). עני נכון\לא נכון ונמקי: לאור תוצאות השלב הראשון, במידה ואליס תמשיך ישירות לשלב השני אזי תוחלת מספר הניסיונות להשגת פונקציות טובות בשלב השני יהיה גדול מ 10.",לא. הסבר: התוחלת חסומה על ידי 2.,\textit{No. Explanation: The expectation is bounded by 2.},"In the first stage of the algorithm, if 0.9𝑛 of the last slots in the table are empty, it implies that the load factor (λ) for the main table is 0.1. The load factor is given by the formula:
 
 \[ \lambda = \frac{n}{m} \]
@@ -1679,7 +1679,7 @@ In the context of perfect hashing using two-level hashing, the expected number o
 
 \[ E[X] = \frac{1}{1-\lambda} = \frac{1}{1-0.1}= \frac{1}{0.9} \approx 1.11 \]
 
-Since the expected number of attempts is less than 10 (1.11<10), the correct answer is false. If Alice continues directly to the second stage, the expected number of attempts to obtain good functions in the second stage will be less than 10.",yes,yes,"[['neutral'], ['neutral']]"
+Since the expected number of attempts is less than 10 (1.11<10), the correct answer is false. If Alice continues directly to the second stage, the expected number of attempts to obtain good functions in the second stage will be less than 10.",yes,yes,"[['neutral'], ['neutral']]",n
 72,816,B,2018,A,B,9-c,T3/ds18AB-Sol.pdf,3,"\textit{An NAVL tree is a binary search tree.}
 
 \textit{It satisfies the following properties:}
@@ -1705,7 +1705,7 @@ Since the expected number of attempts is less than 10 (1.11<10), the correct ans
     \item Brief explanation: A tree as described in section A is a linked list. In such trees, searching is in $O(n)$ like in a linked list.
 \end{itemize}","The minimum number of internal nodes (non-external) of an NAVL tree whose root rank is \( k \) is \( 2^{k+1} - 1 \).
 
-The search complexity of an element in a binary search tree of type NAVL in the worst case is \( O(\log n) \), where \( n \) is the number of nodes in the tree.",no,yes,"[['entailment'], ['neutral']]"
+The search complexity of an element in a binary search tree of type NAVL in the worst case is \( O(\log n) \), where \( n \) is the number of nodes in the tree.",no,yes,"[['entailment'], ['neutral']]",no
 73,818,C,2018,A,A,1,T3/ds18AA-Sol.pdf,7,"In class, we learned about \textbf{select} using a random \textbf{partition}. In a specific run of this algorithm on an array $A$ of length $n$, the function \textbf{select} (including recursive calls to itself) was called $0.75n$ times in total (where $n$ is divisible by $4$). Assume that the runtime of \textbf{partition} is linear in the length of its input.
 The runtime complexity was (choose the tightest answer):
 \begin{enumerate}
@@ -1726,7 +1726,7 @@ The runtime complexity was (choose the tightest answer):
     \item \(O(n^2)\)
     \item Any answer between \(O(n)\) and \(O(n^2)\) is possible and depends on the values of the array.
     \item It is impossible to bound the running time since only the expected running time can be calculated.
-\end{enumerate}",question,maybe,"[['contradiction'], ['contradiction']]"
+\end{enumerate}",question,maybe,"[['contradiction'], ['contradiction']]",
 74,819,C,2018,A,A,2,T3/ds18AA-Sol.pdf,5,"In class, we learned about select which uses a random partition. In a specific run performed by this algorithm on an array \( A \) of length \( n \), the function select (including calls to itself) was called 0.75\( n \) times (where \( n \) is divisible by 4) in total. Assume the running time of partition is linear in the length of its input. We are interested in the array \( A \) being sorted (from smallest to largest).
 After the above run, the number of elements in the array \( A \) that are not in the correct place is (provide the tightest answer):
 A. At most 0.25\( n \)
@@ -1747,7 +1747,7 @@ Since in total select was called 0.75\( n \) times, this means that on average, 
 
 Therefore, the answer is:
 
-A. At most 0.25\( n \)",yes,maybe,"[['contradiction'], ['entailment']]"
+A. At most 0.25\( n \)",yes,maybe,"[['contradiction'], ['entailment']]",no
 75,821,C,2018,A,A,4,T3/ds18AA-Sol.pdf,5,"\documentclass{article}
 \usepackage[utf8]{inputenc}
 \begin{document}
@@ -1806,7 +1806,7 @@ d. \(|\#\text{links}(A) - \#\text{links}(B)| \sim 2^k\)
 
 e. The answer depends on \(k\)
 
-\end{document}",question,,"[['contradiction'], ['contradiction']]"
+\end{document}",question,,"[['contradiction'], ['contradiction']]",
 76,822,C,2018,A,A,5,T3/ds18AA-Sol.pdf,1.6,"\begin{quote}
 Bob implemented the perfect hash algorithm studied in class (two-level hashing). In running the first part of the algorithm (creating the main table), Bob chose the function \( h_1 \) and discovered that for the last \(1 + n - \sqrt{n} \) keys that he inserted into the main table, each one entered a ""private"" cell (i.e., without collision). Based on this information, Bob decided not to check the other keys and not to try additional functions in the first stage, and move on to the second stage. Answer true\false and justify. Within no more than 2 attempts in the second stage (for each sub-table), a perfect hash will be found.
 \end{quote}",FALSE,g,tested,"בוב הריץ את אלגוריתם perfect hash שנלמד בכיתה (two level hashing). בהרצת החלק הראשון של האלגוריתם (יצירת הטבלה הראשית) בחר בוב פונקציה h1 וגילה ש  sqrt(n) +n + 1-  המפתחות האחרונים שהכניס לטבלה הראשית נכנסו כל אחד לתא ""פרטי"" (כלומר ללא התנגשות). על סמך מידע זה החליט בוב שלא יבדוק את המפתחות האחרים ולא ינסה פונקציות נוספות בשלב הראשון ויעבור לבצוע השלב השני. ענה נכון\לא נכון ונמק. תוך 2 נסיונות לכל היותר בשלב השני (עבור כל טבלת משנה) - ימצא hash מושלם.",לא נכון. שלב שני מייצר טבלות ריבועיות ולכן עובד בתוחלת בשני נסיונות נתוני השאלה לא השפיעו על זה.,\textit{Not true. The second stage produces square tables and therefore works on average in two attempts. The data from the question did not affect this.},"\textbf{Solution:}
@@ -1817,7 +1817,7 @@ Justification:
 
 Although Bob was able to insert the last \(1 + n - \sqrt{n}\) keys without collision in the main table using \(h_1\), this does not guarantee that there will be no collisions in the sub-tables during the second stage. The fact that these keys entered ""private"" cells in the main table does not imply that they will not collide in the secondary tables. 
 
-In order to find a perfect hash, Bob still needs to check for collisions in the sub-tables and potentially try additional functions until all keys can be inserted without collision. Therefore, it cannot be guaranteed that a perfect hash will be found within no more than 2 attempts in the second stage.",yes,maybe,"[['neutral'], ['neutral']]"
+In order to find a perfect hash, Bob still needs to check for collisions in the sub-tables and potentially try additional functions until all keys can be inserted without collision. Therefore, it cannot be guaranteed that a perfect hash will be found within no more than 2 attempts in the second stage.",yes,maybe,"[['neutral'], ['neutral']]",n
 77,823,C,2018,A,A,6,T3/ds18AA-Sol.pdf,1.6,"Bob improved the perfect hash algorithm learned in class (two-level hashing). During the execution of the first part of the algorithm (creating the main table), Bob chose a function h1 and found that the last \(1 + n - \sqrt{n} \) keys he inserted into the main table each went into a ""private"" cell (i.e., without collision). Based on this information, Bob decided not to check the other keys and not to try additional functions in the first stage and to move to execute the second stage. Answer true/false and explain. In expectation, within 2 attempts in the second stage (for each subtable), a perfect hash will be found.",1,g,tested,"בוב הריץ את אלגוריתם perfect hash שנלמד בכיתה (two level hashing). בהרצת החלק הראשון של האלגוריתם (יצירת הטבלה הראשית) בחר בוב פונקציה h1 וגילה ש  sqrt(n) +n + 1-  המפתחות האחרונים שהכניס לטבלה הראשית נכנסו כל אחד לתא ""פרטי"" (כלומר ללא התנגשות). על סמך מידע זה החליט בוב שלא יבדוק את המפתחות האחרים ולא ינסה פונקציות נוספות בשלב הראשון ויעבור לבצוע השלב השני. ענה נכון\לא נכון ונמק. תוך 2 נסיונות בתוחלת בשלב השני (עבור כל טבלת משנה) - ימצא hash מושלם.",נכון. שלב שני מייצר טבלות ריבועיות ולכן עובד בתוחלת בשני נסיונות נתוני השאלה לא השפיעו על זה.,"\textit{Correct. The second stage produces square tables, thus works on average in two attempts. The details of the question did not affect this.}","To represent the solution in LaTeX format:
 
 Bob improved the perfect hash algorithm learned in class (two-level hashing). During the execution of the first part of the algorithm (creating the main table), Bob chose a function \(h_1\) and found that the last \(1 + n - \sqrt{n}\) keys he inserted into the main table each went into a ""private"" cell (i.e., without collision). Based on this information, Bob decided not to check the other keys and not to try additional functions in the first stage and to move to execute the second stage. Answer true/false and explain. In expectation, within 2 attempts in the second stage (for each subtable), a perfect hash will be found.
@@ -1826,13 +1826,13 @@ Bob improved the perfect hash algorithm learned in class (two-level hashing). Du
 \text{Answer: True}
 \]
 
-Explanation: Since Bob found that the last \(1 + n - \sqrt{n}\) keys each went into a ""private"" cell without collisions, this suggests that the function \(h_1\) he chose produces a nearly perfect hash. With such a low number of collisions, it is highly likely that only a few attempts will be needed in the second stage to find a perfect hash for each subtable. Therefore, in expectation, within 2 attempts in the second stage (for each subtable), a perfect hash will be found.",yes,yes,"[['neutral'], ['neutral']]"
+Explanation: Since Bob found that the last \(1 + n - \sqrt{n}\) keys each went into a ""private"" cell without collisions, this suggests that the function \(h_1\) he chose produces a nearly perfect hash. With such a low number of collisions, it is highly likely that only a few attempts will be needed in the second stage to find a perfect hash for each subtable. Therefore, in expectation, within 2 attempts in the second stage (for each subtable), a perfect hash will be found.",yes,yes,"[['neutral'], ['neutral']]",n
 78,824,C,2018,A,A,7,T3/ds18AA-Sol.pdf,1.6,"Bob ran the perfect hash algorithm learned in class (two-level hashing). In executing the first part of the algorithm (creating the main table), Bob chose a function $h_1$ and discovered that the last $\1+ n - sqrt{n}$ keys he inserted into the main table each went into a “private” cell (i.e., without collisions). Based on this information, Bob decided not to check the other keys, nor to try additional functions in the first stage, and moved on to execute the second stage. Answer True/False and justify:
 The function $h_1$ does not guarantee Bob that the overall size of the structure will be linear in $n$, and therefore, he will not achieve the performance of the two-level hashing (perfect hash) learned in class.",FALSE,g,tested,"בוב הריץ את אלגוריתם perfect hash שנלמד בכיתה (two level hashing). בהרצת החלק הראשון של האלגוריתם (יצירת הטבלה הראשית) בחר בוב פונקציה h1 וגילה ש  sqrt(n) +n + 1-  המפתחות האחרונים שהכניס לטבלה הראשית נכנסו כל אחד לתא ""פרטי"" (כלומר ללא התנגשות). על סמך מידע זה החליט בוב שלא יבדוק את המפתחות האחרים ולא ינסה פונקציות נוספות בשלב הראשון ויעבור לבצוע השלב השני. ענה נכון\לא נכון ונמק. הפונקציה h1 לא מבטיחה לבוב שהגודל הכללי של המבנה יהיה לינארי ב n ולכן לא ישיג את הביצועים של two level hashing) perfect hash) שנלמד בכיתה.","היא כן מבטיחה, מחישוב סכום ריבועי התאים (המקרה הגרוע ביותר שכל שורש N האיברים הנותרים נופלים באותו מקום עדיין לינארי).","\textit{It does promise, by calculating the sum of the squares of the cells (the worst case that all the square root of N remaining elements fall in the same place is still linear).}","\textbf{Solution:}
 
 False. 
 
-Since the last $\lceil 1 + \sqrt{n} \rceil$ keys went into private cells without collisions, this implies that the load factor of the main table is at most $1 - \frac{1}{\sqrt{n}}$. This means that the overall size of the structure will be linear in $n$, and Bob will still achieve the performance of the two-level hashing (perfect hash) learned in class.",yes,yes,"[['contradiction'], ['neutral']]"
+Since the last $\lceil 1 + \sqrt{n} \rceil$ keys went into private cells without collisions, this implies that the load factor of the main table is at most $1 - \frac{1}{\sqrt{n}}$. This means that the overall size of the structure will be linear in $n$, and Bob will still achieve the performance of the two-level hashing (perfect hash) learned in class.",yes,yes,"[['contradiction'], ['neutral']]",no
 79,825,C,2018,A,A,8,T3/ds18AA-Sol.pdf,1.6,"Bob implemented the perfect hash algorithm that was taught in class (two level hashing). When running the first part of the algorithm (creating the main table), Bob chose a function \( h_1 \) and discovered that the last \(  n + 1 - \sqrt{n} \) keys he inserted into the main table each went into a ""private"" cell (i.e., without collision). Based on this information, Bob decided not to check the other keys and not to try additional functions in the first stage, and moved on to perform the second stage. Answer true\false and explain. Answer 6 is incorrect. However, within 4 attempts on average in the second stage (for each sub-table) a perfect hash will be found.",FALSE,g,tested,"בוב הריץ את אלגוריתם perfect hash שנלמד בכיתה (two level hashing). בהרצת החלק הראשון של האלגוריתם (יצירת הטבלה הראשית) בחר בוב פונקציה h1 וגילה ש  sqrt(n) +n + 1-  המפתחות האחרונים שהכניס לטבלה הראשית נכנסו כל אחד לתא ""פרטי"" (כלומר ללא התנגשות). על סמך מידע זה החליט בוב שלא יבדוק את המפתחות האחרים ולא ינסה פונקציות נוספות בשלב הראשון ויעבור לבצוע השלב השני. ענה נכון\לא נכון ונמק. תשובה 6 אינה נכונה. אבל תוך 4 נסיונות בתוחלת בשלב השני (עבור כל טבלת משנה) - ימצא hash מושלם.",לא נכון. שלב שני מייצר טבלות ריבועיות ולכן עובד בתוחלת בשני נסיונות נתוני השאלה לא השפיעו על זה.,\textit{Not correct. The second stage produces square tables and therefore works on average in two attempts. The question data did not affect this.},"\textbf{Solution:}
 
 Let's assume that Bob inserted \( m = n + 1 - \sqrt{n} \) keys into the main table without collision. This means that Bob inserted exactly one key into each of the \( m \) ""private"" cells.
@@ -1849,10 +1849,10 @@ Given that \( m = n + 1 - \sqrt{n} \), we can calculate the average number of at
 
 \[ \text{Average number of attempts} = \sum_{k=1}^{\infty} k \cdot P(k) \]
 
-Based on the calculations, it is evident that the statement ""within 4 attempts on average in the second stage (for each sub-table) a perfect hash will be found"" is \textbf{true}. Even though the initial assumption about \( m \) was incorrect, the concept of finding a perfect hash within a small number of attempts in the second stage remains valid.",no,no,"[['contradiction'], ['neutral']]"
+Based on the calculations, it is evident that the statement ""within 4 attempts on average in the second stage (for each sub-table) a perfect hash will be found"" is \textbf{true}. Even though the initial assumption about \( m \) was incorrect, the concept of finding a perfect hash within a small number of attempts in the second stage remains valid.",no,no,"[['contradiction'], ['neutral']]",yes
 80,826,C,2018,A,A,9,T3/ds18AA-Sol.pdf,1.6,"Bob ran the perfect hash algorithm learned in class (two-level hashing). When running the first part of the algorithm (creating the main table), Bob chose a function $h_1$ and found that the last $n + 1 - \sqrt{n}$ keys he inserted into the main table each went into a ""private"" cell (i.e., without collision). Based on this information, Bob decided not to check the other keys or try additional functions in the first step and proceeded to perform the second step. Answer True/False and explain. Within $O(n^2)$ time, it is guaranteed that a perfect hash will be found in the second step.",FALSE,g,tested,"בוב הריץ את אלגוריתם perfect hash שנלמד בכיתה (two level hashing). בהרצת החלק הראשון של האלגוריתם (יצירת הטבלה הראשית) בחר בוב פונקציה h1 וגילה ש  sqrt(n) +n + 1-  המפתחות האחרונים שהכניס לטבלה הראשית נכנסו כל אחד לתא ""פרטי"" (כלומר ללא התנגשות). על סמך מידע זה החליט בוב שלא יבדוק את המפתחות האחרים ולא ינסה פונקציות נוספות בשלב הראשון ויעבור לבצוע השלב השני. ענה נכון\לא נכון ונמק. בזמן O(n^2) מובטח שבשלב השני ימצא hash מושלם.",לא נכון. תאורטית יכול להיות אינסוף נסיונות.,"\textit{Not true. Theoretically, there could be infinite attempts.}","False. 
 
-Explanation: Even if all the last $n + 1 - \sqrt{n}$ keys went into private cells in the main table without collision, this does not guarantee that there will be no collisions in the second step when creating the secondary hash tables. The perfect hash algorithm could still encounter collisions during the second step, which may require additional time and effort to resolve. Therefore, it is not guaranteed that a perfect hash will be found within $O(n^2)$ time in the second step.",yes,maybe,"[['neutral'], ['neutral']]"
+Explanation: Even if all the last $n + 1 - \sqrt{n}$ keys went into private cells in the main table without collision, this does not guarantee that there will be no collisions in the second step when creating the secondary hash tables. The perfect hash algorithm could still encounter collisions during the second step, which may require additional time and effort to resolve. Therefore, it is not guaranteed that a perfect hash will be found within $O(n^2)$ time in the second step.",yes,maybe,"[['neutral'], ['neutral']]",n
 81,828,C,2018,A,A,11,T3/ds18AA-Sol.pdf,6,"The regular expression
 
 \(ab+a\)
@@ -1923,7 +1923,7 @@ The runtime of this algorithm is \(O(n^2)\) as we are iterating through all poss
 Circle the best answer:
 b. Worst case time - \(O(n^2)\)
 
-This is because, even though we have to check all possible substrings of lengths ranging from 2 to n/2, the number of iterations required is quadratic in the worst case scenario.",no,yes,"[['neutral'], ['entailment']]"
+This is because, even though we have to check all possible substrings of lengths ranging from 2 to n/2, the number of iterations required is quadratic in the worst case scenario.",no,yes,"[['neutral'], ['entailment']]",no
 82,831,C,2018,A,A,13-a,T3/ds18AA-Sol.pdf,4,\textit{Define an easy binary search tree as a binary tree where the following rule holds: each node x is greater than its left child (if it exists) and smaller than its right child (if it exists). Prove or disprove: any sequence of n different numbers can be inserted into an easy binary search tree in O(n) time.},1,e,tested,"נגדיר עץ חיפוש בינארי קל כעץ בינארי בו מתקיים הכלל הבא: כל צומת x גדול מבנו השמאלי (אם קיים) וקטן מבנו הימני (אם קיים).
 הוכיחו או הפריכו: ניתן לשכן סדרה כלשהיא של n מספרים שונים בעץ חיפוש בינארי קל בזמן O(n).","כן.
 נימוק קצר:
@@ -1937,7 +1937,7 @@ Since the height of a binary search tree determines the time complexity of opera
 
 The correct format in LaTeX for this answer is:
 
-\textit{To prove whether any sequence of n different numbers can be inserted into an easy binary search tree in O(n) time, we need to consider the worst case scenario. The worst-case scenario would be if the sequence of numbers is already sorted in either ascending or descending order. In this case, inserting the numbers one by one into the easy binary search tree would result in a linear chain of nodes where each node only has one child. This would essentially create a linked list instead of a binary search tree, with a height of n-1. Since the height of a binary search tree determines the time complexity of operations such as insertion, the worst-case scenario of O(n) time complexity for inserting n different numbers into an easy binary search tree does not hold true. Therefore, the statement is disproved.}",no,yes,"[['neutral'], ['entailment']]"
+\textit{To prove whether any sequence of n different numbers can be inserted into an easy binary search tree in O(n) time, we need to consider the worst case scenario. The worst-case scenario would be if the sequence of numbers is already sorted in either ascending or descending order. In this case, inserting the numbers one by one into the easy binary search tree would result in a linear chain of nodes where each node only has one child. This would essentially create a linked list instead of a binary search tree, with a height of n-1. Since the height of a binary search tree determines the time complexity of operations such as insertion, the worst-case scenario of O(n) time complexity for inserting n different numbers into an easy binary search tree does not hold true. Therefore, the statement is disproved.}",no,yes,"[['neutral'], ['entailment']]",no
 83,834,C,2018,A,A,14-b,T3/ds18AA-Sol.pdf,2,"A sloppy minimum heap is a heap where instead of returning the minimum, it returns one of the k smallest elements in the heap. Additionally, in the delete operation, it deletes the same element that it returned as the approximate minimum.
 Is the sequence [7,8,5,6,3,4,1,2,...N,N-1] a possible output of a sloppy heap for k=1?",FALSE,h,tested,"ערימת מינימום מרושלת היא ערימה שבמקום להחזיר את המינימום מחזירה את אחד מבין הk איברים הכי קטנים בערימה. בנוסף בפעולת המחיקה היא מוחקת את אותו איבר שהחזירה כמינימום המקורב.
 האם הסדרה  [2,1,4,3,6,5,8,7,...N,N-1] היא פלט אופציונלי של ערימה מרושלת עבור 1=k?","לא, כי כאשר 1 =K הערימה המרושלת היא ערימה רגילה ולכן הפלט צריך להיות ממויין.","\textit{No, because when $K = 1$, the messy heap is a regular heap and therefore the output should be sorted.}","No, the sequence [7,8,5,6,3,4,1,2,...N,N-1] is not a possible output of a sloppy heap for k=1.
@@ -1954,7 +1954,7 @@ After deleting 1, the remaining elements in the sequence are [7,8,5,6,3,4,2,...N
 
 The minimum of these remaining elements is 2, which is not equal to the approximate minimum that was deleted. Therefore, the sequence [7,8,5,6,3,4,1,2,...N,N-1] cannot be a possible output of a sloppy heap for k=1.
 
-Hence, the sequence [7,8,5,6,3,4,1,2,...N,N-1] is not a possible output of a sloppy heap for k=1.",yes,yes,"[['neutral'], ['entailment']]"
+Hence, the sequence [7,8,5,6,3,4,1,2,...N,N-1] is not a possible output of a sloppy heap for k=1.",yes,yes,"[['neutral'], ['entailment']]",yes
 84,837,C,2018,A,A,14-e,T3/ds18AA-Sol.pdf,4,"A lazy minimum heap is a heap that instead of returning the minimum returns one of the k smallest elements in the heap. Additionally, in the delete operation, it deletes the same element that was returned as the approximate minimum. Prove or disprove the following claim:
 For \( k=2 \), it is possible to implement a lazy heap such that all operations take \( O(1) \) amortized time.",FALSE,"b,h",tested,"ערימת מינימום מרושלת היא ערימה שבמקום להחזיר את המינימום מחזירה את אחד מבין הk איברים הכי קטנים בערימה. בנוסף בפעולת המחיקה היא מוחקת את אותו איבר שהחזירה כמינימום המקורב. הוכיחו או הפריכו את הטענה הבאה:
 עבור 2=k ניתן לממש ערימה מרושלת כך שכל הפעולות לוקחות O(1) amortized זמן.","לא ניתן. אם היה ניתן היינו מגיעים לסתירה לחסם התחתון של מיון.
@@ -1966,7 +1966,7 @@ Next, let's consider the delete operation. In a lazy heap with \( k=2 \), when d
 
 Therefore, with lazy deletion, the delete operation in a lazy heap with \( k=2 \) can be implemented to take amortized \( O(1) \) time. 
 
-In conclusion, it is possible to implement a lazy heap with \( k=2 \) such that all operations take \( O(1) \) amortized time.",no,yes,"[['contradiction'], ['neutral']]"
+In conclusion, it is possible to implement a lazy heap with \( k=2 \) such that all operations take \( O(1) \) amortized time.",no,yes,"[['contradiction'], ['neutral']]",yes
 85,839,B,2018,A,A,15-b,T3/ds18AA-Sol.pdf,2,"\begin{quote}
 In the following section, the initialization time and space complexity is O(1), and the space complexity at any given moment is O of the number of elements in the data structure. Describe how a vector of length m can be represented to support insertion at position i, reading from position i, and deletion at position i in O(\log m) worst-case time for each operation.
 \end{quote}",na,"a,f",tested,"בסעיף הבא, סיבוכיות זמן ומקום האיתחול הוא (1)O, וסיבוכיות המקום בכל רגע נתון הוא O של מספר האיברים במבנה הנתונים.
@@ -1977,7 +1977,7 @@ A van Emde Boas tree is a data structure that supports the operations of inserti
 
 Specifically, we can store the indices of the vector in a van Emde Boas tree, where the universe size is m. When inserting at position i, we insert the index i into the van Emde Boas tree in O(\log \log m) time. Similarly, when reading from position i, we can check if index i is present in the van Emde Boas tree in O(\log \log m) time. Finally, when deleting at position i, we can remove index i from the van Emde Boas tree in O(\log \log m) time.
 
-Therefore, by using a van Emde Boas tree to represent a vector of length m, we can achieve insertion, reading, and deletion at position i in O(\log m) worst-case time for each operation.",maybe yes,yes,"[['neutral'], ['entailment']]"
+Therefore, by using a van Emde Boas tree to represent a vector of length m, we can achieve insertion, reading, and deletion at position i in O(\log m) worst-case time for each operation.",maybe yes,yes,"[['neutral'], ['entailment']]",
 86,840,B,2018,A,A,15-c,T3/ds18AA-Sol.pdf,3,"\textbf{In the following section, the time and space complexity of initialization is \(O(1)\), and the space complexity at any given moment is \(O\) of the number of elements in the data structure. Describe how a matrix of size \(m \times m\) can be represented, supporting the operations of insertion at position \((i,j)\), reading from position \((i,j)\), and deletion from position \((i,j)\), in \(O(\log m)\) worst-case time for each operation.}",na,"a,f",tested,"בסעיף הבא, סיבוכיות זמן ומקום האיתחול הוא (1)O, וסיבוכיות המקום בכל רגע נתון הוא O של מספר האיברים במבנה הנתונים. תאר כיצד ניתן לייצג מטריצה בגודל m × m שתומך בפעולות הכנסה למקום ה(i,j), קריאה מהמקום ה(i,j), ומחיקה מהמקום ה(i,j), בזמן O(logm) במקרה הגרוע לכל פעולה.","מבנה נתונים מרכזי: עץ AVL. תיאור קצר:
 הkey יהיה הזוג (i,j) כאשר ההשוואה בין מפתחות תהיה לקסיקוגרפית (משווים את i, ואם יש תיקו משווים את j).
 הvalue יהיה תוכן המטריצה במקום ה(i,j).
@@ -2001,7 +2001,7 @@ Deletion:
 
 To delete from position \((i, j)\), we follow the same steps as in reading, locate the node representing row \(i\), and then delete column \(j\) from the inner BST or sorted linked list of that node. Both of these operations take \(O(\log m)\) time in a balanced BST.
 
-Therefore, by using a modified Balanced Binary Search Tree to represent the matrix, we can achieve \(O(\log m)\) worst-case time complexity for insertion, reading, and deletion operations at any given position in the matrix.",maybe yes,yes,"[['neutral'], ['entailment']]"
+Therefore, by using a modified Balanced Binary Search Tree to represent the matrix, we can achieve \(O(\log m)\) worst-case time complexity for insertion, reading, and deletion operations at any given position in the matrix.",maybe yes,yes,"[['neutral'], ['entailment']]",
 87,842,B,2018,A,A,16-a,T3/ds18AA-Sol.pdf,2,"\text{Describe an implementation of a data structure with the following operations (x is a key):}
 
 \text{Insert(x) - in amortized time \(O(\log n)\).}
@@ -2023,7 +2023,7 @@ Similarly, the Search operation in an AVL tree has an amortized time complexity 
 
 Finally, the Delete operation in an AVL tree also has an amortized time complexity of \(O(\log n\)). When deleting a node, we may need to rebalance the tree using rotations, which can be done in \(O(\log n)\) time.
 
-Overall, an AVL tree provides a data structure that supports Insert, Search, and Delete operations in amortized time complexities of \(O(\log n)\).",yes,yes,"[['contradiction'], ['entailment']]"
+Overall, an AVL tree provides a data structure that supports Insert, Search, and Delete operations in amortized time complexities of \(O(\log n)\).",yes,yes,"[['contradiction'], ['entailment']]",no
 88,843,B,2018,A,A,16-b,T3/ds18AA-Sol.pdf,2,"\begin{quote}
 Describe an implementation of a data structure with the following operations (x is a key):
 \begin{itemize}
@@ -2054,7 +2054,7 @@ Here's how the operations can be implemented:
    - Remove the node with key x from the binary search tree. Since we have a reference to the node obtained from the hash table, this operation can be done in $O(1)$ time.
    - Delete the entry for key x from the hash table using a constant time operation.
 
-By combining a balanced binary search tree with a hash table, we can achieve the desired time complexities for the Insert, Search, and Delete operations.",no,maybe,"[['neutral'], ['entailment']]"
+By combining a balanced binary search tree with a hash table, we can achieve the desired time complexities for the Insert, Search, and Delete operations.",no,maybe,"[['neutral'], ['entailment']]",no
 89,844,B,2018,A,A,16-c,T3/ds18AA-Sol.pdf,7,"\textit{Describe an implementation of a data structure with the following operations (x is a key):} \\
 Insert(x) - \textit{in amortized time} $O(\log n)$. \\
 Search(x) - \textit{in amortized time} $O(\log n)$. \\
@@ -2084,7 +2084,7 @@ Here is the implementation in latex format:
     
     \item \textbf{Delete(x):} \\
     First, delete the key x from the hash table in $O(1)$ time. Then, delete the key x from the binary search tree. To achieve $O(1)$ time complexity, make sure to keep track of the parent node during insertion. This way, deletion can be done in $O(1)$ time by replacing the node to be deleted with its predecessor/successor and updating the necessary pointers. This operation can be done in worst-case $O(\log n)$ time as well to maintain the balance of the tree.
-\end{itemize}",maybe no,yes,"[['contradiction'], ['neutral']]"
+\end{itemize}",maybe no,yes,"[['contradiction'], ['neutral']]",
 90,847,B,2017,A,B,1-c,T3/ds17AB-sol.pdf,6.25,Two AVL trees of size \( n \) each are given. Can they be merged in \( O(n) \) time? Prove using an algorithm or disprove.,na,f,tested,נתונים שני עצי AVL בגודל n כל אחד. האם ניתן למזגם בזמן O(n)? הוכח באמצעות אלגוריתם או הפרך.,"הוכחה. נבצע in order walk על כל אחד מהעצים ונקבל שני מערכים ממוינים של איבריהם. נבצע merge sort לקבלת מערך ממויך יחיד. נבנה ממנו עץ מאוזן באופן הבא: החציון יהיה השורש, הסטטיסטי סדר ה-1/4 וה-3/4 יהיו הבן השמאלי והימני של השורש בהתאמה, וכן הלאה.","\textbf{Proof.} Perform an in-order walk on each of the trees and obtain two sorted arrays of their elements. Perform a merge sort to obtain a single sorted array. Construct a balanced tree from it as follows: the median will be the root, the 1/4 and 3/4 order statistics will be the left and right child of the root respectively, and so on.","To merge two AVL trees of size \( n \) each in \( O(n) \) time, we can perform the following steps:
 
 1. Convert the first AVL tree into a sorted array in \( O(n) \) time using an in-order traversal.
@@ -2096,4 +2096,4 @@ Since each step can be done in linear time, the overall time complexity of mergi
 
 Therefore, it is possible to merge two AVL trees of size \( n \) each in \( O(n) \) time.
 
-\[\boxed{\text{Hence, it is possible to merge two AVL trees of size } n \text{ each in } O(n) \text{ time.}}\]",yes,yes,"[['neutral'], ['entailment']]"
+\[\boxed{\text{Hence, it is possible to merge two AVL trees of size } n \text{ each in } O(n) \text{ time.}}\]",yes,yes,"[['neutral'], ['entailment']]",yes
