@@ -853,7 +853,7 @@ Given that the height of a binary search tree can vary from O(log n) to O(n), th
 
 Therefore, the correct answer is:
 
-\fbox{A. } k=1",no,yes,"[['contradiction'], ['neutral']]",
+\fbox{A. } k=1",no,yes,"[['contradiction'], ['neutral']]",yes
 31,405,c,2011,a,a,5,T2/ds11AAsol.pdf,10,"\textbf{We want to color the nodes of a full binary search tree (i.e., each node has two children) in red and black, so that the coloring adheres to the rules of a red-black tree. Which of the following conditions is a sufficient condition for such a coloring to exist?}
 A. All leaves are at the same distance from the root.  
 B. The largest distance from the root to a leaf is at most twice the smallest distance from the root to a leaf.  
@@ -898,7 +898,7 @@ For the ""select"" algorithm with groups of size \(\log(n)\), the total running 
 T(n) = O(n) + \log(n) (n / \log(n) \log(\log(n)) + \log(n))
 \]
 
-The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes,"[['neutral'], ['entailment']]",
+The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes,"[['neutral'], ['entailment']]",yes
 34,411,b,2011,a,a,9-c,T2/ds11AAsol.pdf,8,"The ""select"" deterministic algorithm operates as follows:
 a. The array is divided into groups of size 5.
 b. Each group is sorted.
@@ -1095,7 +1095,7 @@ Now, let's consider Algorithm A. The fact that Tree A has \(2^{N \log \log N}\) 
 
 Therefore, the correct answer is:
 
-\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes,"[['neutral'], ['contradiction']]",
+\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes,"[['neutral'], ['contradiction']]",no
 42,435,c,2011,b,a,5,T2/ds11-BA-sol.pdf,10,"Two binary heaps are given: heap 1 with \( n_1 \) elements, and heap 2 with \( n_2 \) elements. 
 Also, it is given that \( n_1 = n_2^2 \). 
 Each heap is maintained in an infinite array. What is the best running time for merging the two heaps, that is, an operation that results in one array (it can be one of the heap arrays, there is no need to preserve the original heaps) containing all the elements, such that they represent a heap?
@@ -1447,7 +1447,7 @@ A tango heap is a data structure that allows for constant time operations for in
 
 The tango heap maintains two separate heaps: a lazy heap and an active heap. The lazy heap is used for insert operations, while the active heap is used for find minimum and delete minimum operations. When the lazy heap size exceeds a certain threshold, the two heaps are swapped, and the lazy heap is merged into the active heap. This swapping and merging process allows for constant time complexity for all operations.
 
-By using a tango heap, we can implement the sloppy minimum heap such that all operations in the ADT take amortized \( O(1) \) time for \( k = n/100 \).",maybe,yes,"[['neutral'], ['entailment']]",
+By using a tango heap, we can implement the sloppy minimum heap such that all operations in the ADT take amortized \( O(1) \) time for \( k = n/100 \).",maybe,yes,"[['neutral'], ['entailment']]",yes
 61,797,B,2018,A,B,2-a,T3/ds18AB-Sol.pdf,3,"\begin{enumerate}
     \item Given a valid binary min-heap with $n$ elements, at which levels in the tree can the second smallest element be located?
     \item What is the minimum number of elements you would need to read in order to guarantee finding the second smallest element?
@@ -1572,7 +1572,7 @@ T(n) &\leq T(n-1) + c_1 \cdot n + c_2 \cdot n \\
 
 Therefore, by induction, the cost of \textit{select} using \textit{GoodPivot} is \(O(n)\).
 
-The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes,"[['entailment'], ['entailment']]",
+The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes,"[['entailment'], ['entailment']]",yes
 67,805,C,2018,A,B,6-a,T3/ds18AB-Sol.pdf,5,"In order to improve \texttt{quicksort}, a new function \texttt{GreatPivot} has been created. It receives an array containing $n$ keys and returns a random value that is uniformly distributed among all key values that are greater than or equal to the $\lceil 0.05n \rceil$-th largest and less than or equal to the $\lfloor 0.95n \rfloor$-th largest element. The \texttt{partition} function performs the partitioning using this value. In other words, unlike \texttt{randpartition}, which selects a pivot randomly from all elements, this choice is restricted to only 90\% of the elements mentioned above.
 
 The cost of \texttt{greatpivot} is $O(1)$, and the cost of \texttt{partition} is linear. The time complexity of \texttt{quicksort} when using \texttt{partition} and \texttt{GreatPivot} is, in the worst case:
@@ -1977,7 +1977,7 @@ A van Emde Boas tree is a data structure that supports the operations of inserti
 
 Specifically, we can store the indices of the vector in a van Emde Boas tree, where the universe size is m. When inserting at position i, we insert the index i into the van Emde Boas tree in O(\log \log m) time. Similarly, when reading from position i, we can check if index i is present in the van Emde Boas tree in O(\log \log m) time. Finally, when deleting at position i, we can remove index i from the van Emde Boas tree in O(\log \log m) time.
 
-Therefore, by using a van Emde Boas tree to represent a vector of length m, we can achieve insertion, reading, and deletion at position i in O(\log m) worst-case time for each operation.",maybe yes,yes,"[['neutral'], ['entailment']]",
+Therefore, by using a van Emde Boas tree to represent a vector of length m, we can achieve insertion, reading, and deletion at position i in O(\log m) worst-case time for each operation.",maybe yes,yes,"[['neutral'], ['entailment']]",yes
 86,840,B,2018,A,A,15-c,T3/ds18AA-Sol.pdf,3,"\textbf{In the following section, the time and space complexity of initialization is \(O(1)\), and the space complexity at any given moment is \(O\) of the number of elements in the data structure. Describe how a matrix of size \(m \times m\) can be represented, supporting the operations of insertion at position \((i,j)\), reading from position \((i,j)\), and deletion from position \((i,j)\), in \(O(\log m)\) worst-case time for each operation.}",na,"a,f",tested,"בסעיף הבא, סיבוכיות זמן ומקום האיתחול הוא (1)O, וסיבוכיות המקום בכל רגע נתון הוא O של מספר האיברים במבנה הנתונים. תאר כיצד ניתן לייצג מטריצה בגודל m × m שתומך בפעולות הכנסה למקום ה(i,j), קריאה מהמקום ה(i,j), ומחיקה מהמקום ה(i,j), בזמן O(logm) במקרה הגרוע לכל פעולה.","מבנה נתונים מרכזי: עץ AVL. תיאור קצר:
 הkey יהיה הזוג (i,j) כאשר ההשוואה בין מפתחות תהיה לקסיקוגרפית (משווים את i, ואם יש תיקו משווים את j).
 הvalue יהיה תוכן המטריצה במקום ה(i,j).
@@ -2001,7 +2001,7 @@ Deletion:
 
 To delete from position \((i, j)\), we follow the same steps as in reading, locate the node representing row \(i\), and then delete column \(j\) from the inner BST or sorted linked list of that node. Both of these operations take \(O(\log m)\) time in a balanced BST.
 
-Therefore, by using a modified Balanced Binary Search Tree to represent the matrix, we can achieve \(O(\log m)\) worst-case time complexity for insertion, reading, and deletion operations at any given position in the matrix.",maybe yes,yes,"[['neutral'], ['entailment']]",
+Therefore, by using a modified Balanced Binary Search Tree to represent the matrix, we can achieve \(O(\log m)\) worst-case time complexity for insertion, reading, and deletion operations at any given position in the matrix.",maybe yes,yes,"[['neutral'], ['entailment']]",yes
 87,842,B,2018,A,A,16-a,T3/ds18AA-Sol.pdf,2,"\text{Describe an implementation of a data structure with the following operations (x is a key):}
 
 \text{Insert(x) - in amortized time \(O(\log n)\).}
@@ -2084,7 +2084,7 @@ Here is the implementation in latex format:
     
     \item \textbf{Delete(x):} \\
     First, delete the key x from the hash table in $O(1)$ time. Then, delete the key x from the binary search tree. To achieve $O(1)$ time complexity, make sure to keep track of the parent node during insertion. This way, deletion can be done in $O(1)$ time by replacing the node to be deleted with its predecessor/successor and updating the necessary pointers. This operation can be done in worst-case $O(\log n)$ time as well to maintain the balance of the tree.
-\end{itemize}",maybe no,yes,"[['contradiction'], ['neutral']]",
+\end{itemize}",maybe no,yes,"[['contradiction'], ['neutral']]",yes
 90,847,B,2017,A,B,1-c,T3/ds17AB-sol.pdf,6.25,Two AVL trees of size \( n \) each are given. Can they be merged in \( O(n) \) time? Prove using an algorithm or disprove.,na,f,tested,נתונים שני עצי AVL בגודל n כל אחד. האם ניתן למזגם בזמן O(n)? הוכח באמצעות אלגוריתם או הפרך.,"הוכחה. נבצע in order walk על כל אחד מהעצים ונקבל שני מערכים ממוינים של איבריהם. נבצע merge sort לקבלת מערך ממויך יחיד. נבנה ממנו עץ מאוזן באופן הבא: החציון יהיה השורש, הסטטיסטי סדר ה-1/4 וה-3/4 יהיו הבן השמאלי והימני של השורש בהתאמה, וכן הלאה.","\textbf{Proof.} Perform an in-order walk on each of the trees and obtain two sorted arrays of their elements. Perform a merge sort to obtain a single sorted array. Construct a balanced tree from it as follows: the median will be the root, the 1/4 and 3/4 order statistics will be the left and right child of the root respectively, and so on.","To merge two AVL trees of size \( n \) each in \( O(n) \) time, we can perform the following steps:
 
 1. Convert the first AVL tree into a sorted array in \( O(n) \) time using an in-order traversal.

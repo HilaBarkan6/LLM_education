@@ -898,7 +898,7 @@ For the ""select"" algorithm with groups of size \(\log(n)\), the total running 
 T(n) = O(n) + \log(n) (n / \log(n) \log(\log(n)) + \log(n))
 \]
 
-The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes,"['neutral', 'neutral']",
+The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes,"['neutral', 'neutral']",n
 34,411,b,2011,a,a,9-c,T2/ds11AAsol.pdf,8,"The ""select"" deterministic algorithm operates as follows:
 a. The array is divided into groups of size 5.
 b. Each group is sorted.
@@ -984,7 +984,7 @@ Since \( e \approx 2.71828 \) and \( \pi \approx 3.14159 \), we can simplify thi
 N\log_2(N) - 1.4427N + 0.9074\log_2(N) \approx N\log_2(N)
 \]
 
-Therefore, the best possible lower bound for sorting arrays of this type in the comparison model is \( O(N\log_2(N)) \) comparisons.",maybe,yes,"['contradiction', 'contradiction']",
+Therefore, the best possible lower bound for sorting arrays of this type in the comparison model is \( O(N\log_2(N)) \) comparisons.",maybe,yes,"['contradiction', 'contradiction']",no
 38,430,b,2011,a,b,12-c,T2/ds11-AB.pdf,6,"\[
 \text{Given an array of size } n, \text{ divided into } \frac{n}{k} \text{ segments, each of length } k. \text{ It is known that for any two of the } k \text{ segments, either all the elements in the first segment are smaller than all the elements in the second segment, or all the elements in the first segment are larger than all the elements in the second segment.}
 \]
@@ -1095,7 +1095,7 @@ Now, let's consider Algorithm A. The fact that Tree A has \(2^{N \log \log N}\) 
 
 Therefore, the correct answer is:
 
-\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes,"['neutral', 'neutral']",
+\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes,"['neutral', 'neutral']",n
 42,435,c,2011,b,a,5,T2/ds11-BA-sol.pdf,10,"Two binary heaps are given: heap 1 with \( n_1 \) elements, and heap 2 with \( n_2 \) elements. 
 Also, it is given that \( n_1 = n_2^2 \). 
 Each heap is maintained in an infinite array. What is the best running time for merging the two heaps, that is, an operation that results in one array (it can be one of the heap arrays, there is no need to preserve the original heaps) containing all the elements, such that they represent a heap?
@@ -1447,7 +1447,7 @@ A tango heap is a data structure that allows for constant time operations for in
 
 The tango heap maintains two separate heaps: a lazy heap and an active heap. The lazy heap is used for insert operations, while the active heap is used for find minimum and delete minimum operations. When the lazy heap size exceeds a certain threshold, the two heaps are swapped, and the lazy heap is merged into the active heap. This swapping and merging process allows for constant time complexity for all operations.
 
-By using a tango heap, we can implement the sloppy minimum heap such that all operations in the ADT take amortized \( O(1) \) time for \( k = n/100 \).",maybe,yes,"['entailment', 'neutral']",
+By using a tango heap, we can implement the sloppy minimum heap such that all operations in the ADT take amortized \( O(1) \) time for \( k = n/100 \).",maybe,yes,"['entailment', 'neutral']",yes
 61,797,B,2018,A,B,2-a,T3/ds18AB-Sol.pdf,3,"\begin{enumerate}
     \item Given a valid binary min-heap with $n$ elements, at which levels in the tree can the second smallest element be located?
     \item What is the minimum number of elements you would need to read in order to guarantee finding the second smallest element?
@@ -1572,7 +1572,7 @@ T(n) &\leq T(n-1) + c_1 \cdot n + c_2 \cdot n \\
 
 Therefore, by induction, the cost of \textit{select} using \textit{GoodPivot} is \(O(n)\).
 
-The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes,"['neutral', 'neutral']",
+The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes,"['neutral', 'neutral']",n
 67,805,C,2018,A,B,6-a,T3/ds18AB-Sol.pdf,5,"In order to improve \texttt{quicksort}, a new function \texttt{GreatPivot} has been created. It receives an array containing $n$ keys and returns a random value that is uniformly distributed among all key values that are greater than or equal to the $\lceil 0.05n \rceil$-th largest and less than or equal to the $\lfloor 0.95n \rfloor$-th largest element. The \texttt{partition} function performs the partitioning using this value. In other words, unlike \texttt{randpartition}, which selects a pivot randomly from all elements, this choice is restricted to only 90\% of the elements mentioned above.
 
 The cost of \texttt{greatpivot} is $O(1)$, and the cost of \texttt{partition} is linear. The time complexity of \texttt{quicksort} when using \texttt{partition} and \texttt{GreatPivot} is, in the worst case:
@@ -1668,7 +1668,7 @@ col| >= (n/10)*(10*9/2) = n*9/2 > n       ->       algorithm will rpeat stage 1|
 \text{False.}
 \]
 
-Alice cannot proceed to the second stage of the algorithm because the load factor of the main table is too high. The load factor is calculated as \( \frac{n - 0.9n}{n} = 0.1 \), which means that 90% of the table is full. The algorithm requires that the load factor of the main table should be less than 0.5 to proceed to the second stage of the algorithm. Therefore, since the load factor is 0.1, Alice cannot proceed to the second stage.",maybe,maybe,"['contradiction', 'contradiction']",
+Alice cannot proceed to the second stage of the algorithm because the load factor of the main table is too high. The load factor is calculated as \( \frac{n - 0.9n}{n} = 0.1 \), which means that 90% of the table is full. The algorithm requires that the load factor of the main table should be less than 0.5 to proceed to the second stage of the algorithm. Therefore, since the load factor is 0.1, Alice cannot proceed to the second stage.",maybe,maybe,"['contradiction', 'contradiction']",no
 71,811,C,2018,A,B,8-c,T3/ds18AB-Sol.pdf,2,"Alice ran the Perfect Hash algorithm learned in class (Two Level Hashing) on 𝑛>100,000 keys. In running the first part of the algorithm (creating the main table), Alice chose a function ℎ1 and found that all 0.9𝑛 of the last slots in the table are empty (we do not know what happened in the first slots). Answer true\false and explain: In light of the results of the first stage, if Alice continues directly to the second stage, then the expected number of attempts to obtain good functions in the second stage will be greater than 10.",FALSE,g,tested,"אליס הריצה את האלגוריתם Perfect Hash שנלמד בכיתה ( Two Level Hashing ) על 𝑛>100,000 מפתחות. בהרצת החלק הראשון של האלגוריתם )יצירת הטבלה הראשית) בחרה אליס פונקציה ℎ1 וגילתה שכל 0.9𝑛 התאים האחרונים בטבלה ריקים (לא ידוע לנו מה קרה בתאים הראשונים). עני נכון\לא נכון ונמקי: לאור תוצאות השלב הראשון, במידה ואליס תמשיך ישירות לשלב השני אזי תוחלת מספר הניסיונות להשגת פונקציות טובות בשלב השני יהיה גדול מ 10.",לא. הסבר: התוחלת חסומה על ידי 2.,\textit{No. Explanation: The expectation is bounded by 2.},"In the first stage of the algorithm, if 0.9𝑛 of the last slots in the table are empty, it implies that the load factor (λ) for the main table is 0.1. The load factor is given by the formula:
 
 \[ \lambda = \frac{n}{m} \]
