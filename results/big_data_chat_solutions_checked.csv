@@ -104,16 +104,7 @@ Modify the QuickSort algorithm as follows: the pivot element will be selected by
 נוסחת הנסיגה: T(n) = T(3n/4) + T(n/4) + Θ(n) (עד כדי עיגול לשלמים).","The correct answer is D.\\
 
 The runtime will be the same for the worst case and the average case – it will not actually be affected by the input or random choices.
-The recurrence formula: \( T(n) = T\left(\frac{3n}{4}\right) + T\left(\frac{n}{4}\right) + \Theta(n) \) (rounded to integers).","The solution in latex format is as follows:
-
-\begin{itemize}
-    \item[(a)] W.C.- $\Theta(n\log(n))$, Expected - $\Theta(n)$
-    \item[(b)] W.C.- $\Theta(n^2)$, Expected - $\Theta(n^2)$ 
-    \item[(c)] W.C.- $\Theta(n^2)$, Expected - $\Theta(n\log(n))$
-    \item[(d)] W.C.- $\Theta(n\log(n))$, Expected - $\Theta(n\log(n))$
-    \item[(e)] W.C.- $\Theta(n^{0.25}\log(n))$, Expected - $\Theta(n^{0.25}\log(n))$ 
-    \item[(f)] W.C.- $\Theta(n^2\log(n))$, Expected - $\Theta(n^2\log(n))$
-\end{itemize}",question,yes
+The recurrence formula: \( T(n) = T\left(\frac{3n}{4}\right) + T\left(\frac{n}{4}\right) + \Theta(n) \) (rounded to integers).","(d) W.C.- $\Theta(n\log(n))$, Expected - $\Theta(n\log(n))$",yes,yes
 102,C,2004,b,"a,b",1,https://docs.google.com/document/d/1LSxoxH2sEItqkTRlrCstcMk02LN676Jz,8,"
 Solve the following recurrence formula:
 \[ T(n) = T(c \cdot n) + T((1-c) \cdot n) + n \]
@@ -322,14 +313,7 @@ E. none of the above.
 ה. יכול להיות θ(log(n)).
 ו. יכול להיות θ(n).","ב. למינימום אין בן שמאלי. לכן הוא עלה או צומת עם בן ימני שחייב, לפי הגדרת AVL , להיות עלה.","
 b. The minimum has no left child. Therefore, it is a leaf or a node with a right child that must, according to the AVL definition, be a leaf.
-","\begin{enumerate}
-    \item necessarily \( 0 \).
-    \item less than or equal to \( 1 \).
-    \item exactly \( 1 \).
-    \item less than or equal to \( 2 \).
-    \item possibly \(\Theta(\log(n))\).
-    \item possibly \(\Theta(n)\).
-\end{enumerate}",question,yes
+",necessarily \( 0 \).,no,yes
 120,C,2005,a,a,7,https://docs.google.com/document/d/1Ze9Vu1t-M8eGfSRY5m6GdpbIz9KUxnzN,9,"\noindent Given an array $A$ containing $n$ distinct (unsorted) elements. A min-heap $H$ is given, containing the same elements. We want to take the smallest $n^{0.5}$ elements and sort them in the lowest worst-case time. Let $a(n)$ be the cost of performing the operation (with the best algorithm you know) on $A$ and let $h(n)$ be the cost of performing the operation (with the best algorithm you know) on $H$. Then:
 \begin{enumerate}
     \item The cost of execution for both algorithms is identical.
@@ -344,13 +328,7 @@ b. The minimum has no left child. Therefore, it is a leaf or a node with a right
 a(n)=o(h(n .4. )).
 h(n)=o(a(n .5)).",ה. על A מבצעים ORDER STAT ואחכ מיון. עלות:  EMBED Equation.3  על H מבצעים  EMBED Equation.3   DELETEMIN . עלות:  EMBED Equation.3,"
 5. Perform ORDER STAT on \( A \) and then sort. Cost: \(\Theta(A \log A)\). Perform \(\Theta(H \cdot \log H)\) DELETEMIN on \( H \). Cost: \(\Theta(H \cdot \log H)\).
-","\begin{enumerate}
-    \item The cost of execution for both algorithms is identical.
-    \item The cost of execution for both algorithms is asymptotically the same, but the constant factor for $a(n)$ is lower.
-    \item The cost of execution for both algorithms is asymptotically the same, but the constant factor for $h(n)$ is lower.
-    \item $a(n) = o(h(n))$.
-    \item $h(n) = o(a(n))$.
-\end{enumerate}",question,
+","The cost of execution for both algorithms is asymptotically the same, but the constant factor for $a(n)$ is lower.",no,no
 139,C,2006,a,a,3,https://docs.google.com/document/d/1altMUQBVybKQpoFz-rQsDmI_e0FWhzbu,8,"
 The recurrence formula \( T(n) = T(n/2) + T(n/2) + \theta(n) \) describes the W.C. running time of the following algorithms:
 Note: For a specific algorithm, it is not enough that the complexity matches the solution of the recurrence formula. The recurrence formula must also fit the operation of the algorithm.
@@ -499,13 +477,9 @@ f. \ \text{None of the above.}",C,"a,h",tested,"נתונה ערימת מקסימ
 ה. θ(n^3)
 ו. אף אחד מהנ""ל.",ג.הזמן שדרוש כדי לגשת לכל אחד מהצמתים ששושנו הוא   EMBED Equation.DSMT4      לכן לא יתכן פתרון מהיר יותר.בזמן   EMBED Equation.DSMT4     אפשר לבצע BuildHeap מחדש על כל האיברים.,"
 The time required to access each of the nodes in our list is \( O(n) \), therefore a faster solution is not possible. In \( O(n \log n) \) time, it is possible to perform BuildHeap again on all the elements.
-","\text{Given a max-heap of size } n. \text{ The keys of } \frac{n}{4} \text{ of the leaves in the heap have been changed, so now the heap may no longer be valid. We want to make the heap valid with minimal worst-case running time. Assume there is access to the elements of the heap (i.e., the heap is not a black box). The worst-case running time will be:} \\
-\text{a. } \theta(\log(n)) \\
-\text{b. } \theta(\log(n)^2) \\
-\text{c. } \theta(n) \\
-\text{d. } \theta(n\log(n) \\
-\text{e. } \theta(n^3) \\
-\text{f. None of the above.}",question,yes
+","f. None of the above. 
+
+The worst-case running time to restore a max-heap with $\frac{n}{4}$ keys of the leaves changed is $\theta(n)$.",no,yes
 173,C,2007,a,a,7,https://docs.google.com/document/d/15av3BYO1sip8j7xbHE3cwGQOEe2WyO9U,7,"\text{What is the lower bound in the comparison model of the worst-case runtime of a sorting algorithm, if it is known that }$ n^{0.5}$ \text{ of the smaller elements are already in the correct place?}
 \begin{enumerate}
     \item $\theta(\log(n))$
@@ -566,7 +540,7 @@ The algorithm must at least look at all $n$ elements in the worst case to determ
 
 \text{Assume that the set of numbers is } \{1, 2, \ldots, n\}. \text{ Which array contains the highest number of inversions? How many inversions does it contain?}",na,d,tested,,,"\textit{In a reversely sorted array, each such pair is an inversion. The number of such pairs is } $\theta(n^2)$.","The array that contains the highest number of inversions is the array sorted in descending order, i.e. $A = [n, n-1, \ldots, 2, 1]$.
 
-To calculate the number of inversions in this array, we note that each element $A[i]$ to the left of an element $A[j]$ has to be greater than $A[j]$ in order to form an inversion. Since $A$ is sorted in descending order, each element is greater than all subsequent elements to its right. Thus, the number of inversions in this array is given by the sum of the first $n-1$ positive integers, which is $\frac{n(n-1)}{2}$.",,
+To calculate the number of inversions in this array, we note that each element $A[i]$ to the left of an element $A[j]$ has to be greater than $A[j]$ in order to form an inversion. Since $A$ is sorted in descending order, each element is greater than all subsequent elements to its right. Thus, the number of inversions in this array is given by the sum of the first $n-1$ positive integers, which is $\frac{n(n-1)}{2}$.",yes,yes
 245,b,2010,b,a,2-d,T2/ds10ba.doc,na,"\documentclass{article}
 \usepackage[utf8]{inputenc}
 \begin{document}
@@ -590,28 +564,15 @@ What is the running time of the algorithm as a function of $m$ and $n$, assuming
 
 \end{document}",na,"m,c,j",tested,,,"\begin{quote}
 The first two lines require time proportional to the size of the array we are currently dealing with. The first two recursive calls operate on an array whose size is at most half of the original size. The last line advances the letter \( j \) within the strings from \( p \) to \( q \); it is called up to \( t \) times for each string. From an analysis similar to Quicksort, plus \( O(nt) \) work, we get \( O(m+n\log n) \).
-\end{quote}","\documentclass{article}
-\usepackage[utf8]{inputenc}
-\begin{document}
+\end{quote}","The running time of the algorithm is $O(m \log n)$. 
 
-In this problem, we will sort strings in lexicographic order (dictionary order). A string is a list of characters over a known alphabet. For the sake of simplicity, assume all strings have the same length $t$. A string $s_1$ comes before a string $s_2$ in order if the first character in which they differ is smaller in $s_1$ than in $s_2$. For example, if $s_1=\text{CGTAA}$ and $s_2=\text{CGTCA}$ then $s_1$ comes before $s_2$. Assume that each character in every string can be accessed in constant time. Denote $n$ as the number of strings, and $m$ as the total length of all strings. Note that $m=n \cdot t$. Assume that the strings are given in an array $A$, that is $A[i]$ is a pointer to the $i+1$ string in the array. (Indices in $A$ start from 0.)
+Proof: 
+- The algorithm divides the strings into two parts using the median character at position $j$. This division takes $O(n)$ time as finding the median character involves comparing each character at position $j$ in all strings. 
+- After the division, the algorithm recursively sorts the two parts. Since the division is based on characters at position $j$, the algorithm needs to perform $O(t)$ comparisons at each level of recursion. 
+- There are $\log n$ levels of recursion since in each level the number of strings being sorted is halved. 
+- Therefore, the total number of comparisons is $O(n \cdot t \cdot \log n) = O(m \log n)$. 
 
-The following algorithm, which uses the routines $\text{find-median-char}$ and $\text{partition}$, sorts the strings at locations $k_1,k_1+1,\ldots,k_2$ in array $A$ according to the lexicographic order of the suffixes of these strings starting at position $j$, using comparisons between pairs of characters only. (The suffix of a string consists of the string's characters starting from a certain position $j$ to the end of the string.) To sort all the strings lexicographically, perform $\text{string-sort}(0,n-1,0)$. (The indices of the characters in the strings also start from 0.)
-
-\begin{verbatim}
-string-sort(k1,k2,j):
-   C \leftarrow \text{find-median-char}(k1,k2,j)
-   (p,q) \leftarrow \text{partition}(k1,k2,C,j)
-   \text{If} (k1 < p) \text{string-sort}(k1,p-1,j);
-   \text{If} (q < k2) \text{string-sort}(q+1,k2,j);
-   \text{If} (j < t-1) \text{and} (p < q) \text{string-sort}(p,q,j+1);
-\end{verbatim}
-
-The routine $\text{find-median-char}(k1,k2,j)$ returns the median character in the set of characters at position $j$ of the strings at locations $k_1,\ldots,k_2$ in $A$. 
-
-What is the running time of the algorithm as a function of $m$ and $n$, assuming that $\text{find-median-char}(k1,k2,j)$ and $\text{partition}(k1,k2,C,j)$ run in time $O(k_2-k_1)$? Prove your answer.
-
-\end{document}",question,
+Thus, the running time of the algorithm is $O(m \log n)$.",no,yes
 246,b,2010,b,a,3-a,T2/ds10ba.doc,na,"\textit{A tournament containing \( n \) elements is a perfect binary tree of depth \( i \) where \( i = \lceil \log_2(n) \rceil \) (at distance \( k \) from the root there are exactly \( 2^k \) nodes). The elements are placed at the leaves. In each internal node, we place the smallest of the elements located in the children of that node. A leaf that does not contain a real element contains a dummy element denoted by \( \infty \), which is greater than any real element. We represent the tree using an array like a binary heap, where the children of the node represented by cell \( i \) are represented by the cells \( 2i+1 \) and \( 2i+2 \).
 
 Given \( n \) elements, we construct a tournament containing them as follows. We allocate an array of appropriate size and initialize it entirely with the value \( \infty \). Then we insert the elements one by one. To add an element to the tournament, we place it in the next available leaf from left to right and update, if necessary, the elements located in the ancestors of that leaf.}
@@ -670,25 +631,7 @@ If $k\leq r$, the algorithm finds, by a recursive call, the k-th largest element
 You can ignore partition issues. (It is possible, when convenient, to assume that $n$ is divisible by 4, that $m$ is divisible by 5, and so on.)
 What is the smallest $b$ such that $r\leq bn+O(1)$ always holds? Prove your answer.
 
-\end{document}",na,m,tested,,,\( 1 - \frac{3}{5} \cdot \frac{2}{4} = \frac{7}{10} \),"\documentclass{article}
-\begin{document}
-
-In this question, we analyze a new deterministic algorithm for the Selection problem. The algorithm selects the k-th largest element from a set $A$ with $n$ distinct elements.
-
-If $n<100$, the algorithm sorts the $n$ elements and returns the k-th largest element.
-
-Otherwise, the algorithm divides the elements into quartets. The algorithm sorts each quartet and chooses from it the third largest element. (If the quartet is $a<b<c<d$, then the chosen element is $c$.) Let $B$ be the set of chosen elements.
-
-Among the $m=n/4$ elements of $B$, the algorithm selects, by a recursive call, the $(2/5)m$-th largest element. Let this element be $x$. ($x$ is greater than or equal to $(2/5)m$ of the elements of $B$.)
-
-The element $x$ is now compared to all the elements of $A$. Let $A_1$ be the elements of $A$ that are less than or equal to $x$, and $A_2$ be the elements of $A$ that are greater than $x$. Also, let $r=|A_1|$.
-
-If $k\leq r$, the algorithm finds, by a recursive call, the k-th largest element in $A_1$ and returns it. Otherwise, the algorithm finds, by a recursive call, the $(k−r)$-th largest element in $A_2$ and returns it.
-
-You can ignore partition issues. (It is possible, when convenient, to assume that $n$ is divisible by 4, that $m$ is divisible by 5, and so on.)
-What is the smallest $b$ such that $r\leq bn+O(1)$ always holds? Prove your answer.
-
-\end{document}",question,
+\end{document}",na,m,tested,,,\( 1 - \frac{3}{5} \cdot \frac{2}{4} = \frac{7}{10} \),The smallest b is 2/5.,no,yes
 251,b,2010,b,a,4-c,T2/ds10ba.doc,na,"
 In this question, we will analyze a new deterministic algorithm for the selection problem. The algorithm selects the k-th largest element from a set \( A \) with \( n \) distinct elements.
 
@@ -732,27 +675,7 @@ If \( k \leq r \), the algorithm finds, by a recursive call, the k-th largest el
 Division issues can be ignored. (It is possible to assume for convenience that n is divisible by 4, m is divisible by 5, and so on.)
 What is the runtime of the algorithm (as a function of n)? (An asymptotic answer in terms of \( O(.) \) is sufficient.)
 
-\end{document}",na,"m,c,a",tested,,,"\text{Since } \frac{1}{4} + \frac{7}{10} < 1, \text{ the analysis is similar to that of the selection algorithm - } O(n).","\documentclass{article}
-\usepackage{amsmath}
-
-\begin{document}
-
-In this question, we will analyze a new deterministic algorithm for the Selection problem. The algorithm selects the $k$-th largest element from a set $A$ of $n$ different elements.
-
-If $n < 100$, the algorithm sorts the $n$ elements and returns the $k$-th largest element.
-
-Otherwise, the algorithm divides the elements into quartets. The algorithm sorts each quartet and selects from it the third largest element. (If the quartet is $a < b < c < d$, then the selected element is $c$.) Let $B$ denote the set of selected elements.
-
-Among the $m = n/4$ elements of $B$, the algorithm selects, by a recursive call, the $(2/5)m$-largest element. Let this element be denoted by $x$. ($x$ is greater than or equal to $(2/5)m$ of the elements of $B$.)
-
-The element $x$ is now compared to all the elements of $A$. Let $A_1$ denote the elements of $A$ that are less than or equal to $x$, and let $A_2$ denote the elements of $A$ that are greater than $x$. Also denote $r = |A_1|$.
-
-If $k \leq r$, the algorithm finds, by a recursive call, the $k$-th largest element in $A_1$ and returns it. Otherwise, the algorithm finds, by a recursive call, the $(k-r)$-th largest element in $A_2$ and returns it.
-
-Division issues can be ignored. (It is possible to assume for convenience that $n$ is divisible by 4, $m$ is divisible by 5, and so on.)
-What is the runtime of the algorithm (as a function of $n$)? (An asymptotic answer in terms of $O(.)$ is sufficient.)
-
-\end{document}",question,yes
+\end{document}",na,"m,c,a",tested,,,"\text{Since } \frac{1}{4} + \frac{7}{10} < 1, \text{ the analysis is similar to that of the selection algorithm - } O(n).",The runtime of the algorithm is \( O(n \log n) \).,no,yes
 285,c,2012,a,a,1,T2/ds12-AA.doc,9,"\textbf{Given} an input consisting of $n$ distinct arbitrary integers, we are interested in sorting it. \textbf{It is also given} that the number of inversion pairs, denoted by $\frac{n(n-1)}{2}$, the number of number pairs that are in reverse relative order, is $I = \frac{n(n-1)}{2} - 5n$. A pair of elements $a_i$ and $a_j$ is inverted if $a_i < a_j$ and $i > j$.
 
 Choose the most correct answer (it is possible that among different options, the strongest correct one should be chosen).
@@ -898,7 +821,7 @@ For the ""select"" algorithm with groups of size \(\log(n)\), the total running 
 T(n) = O(n) + \log(n) (n / \log(n) \log(\log(n)) + \log(n))
 \]
 
-The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",maybe,yes
+The cost of step b is \(\log(n) \log(\log(n))\) as it involves sorting each group of size \(\log(n)\).",no,yes
 411,b,2011,a,a,9-c,T2/ds11AAsol.pdf,8,"The ""select"" deterministic algorithm operates as follows:
 a. The array is divided into groups of size 5.
 b. Each group is sorted.
@@ -984,7 +907,7 @@ Since \( e \approx 2.71828 \) and \( \pi \approx 3.14159 \), we can simplify thi
 N\log_2(N) - 1.4427N + 0.9074\log_2(N) \approx N\log_2(N)
 \]
 
-Therefore, the best possible lower bound for sorting arrays of this type in the comparison model is \( O(N\log_2(N)) \) comparisons.",maybe,yes
+Therefore, the best possible lower bound for sorting arrays of this type in the comparison model is \( O(N\log_2(N)) \) comparisons.",no,yes
 430,b,2011,a,b,12-c,T2/ds11-AB.pdf,6,"\[
 \text{Given an array of size } n, \text{ divided into } \frac{n}{k} \text{ segments, each of length } k. \text{ It is known that for any two of the } k \text{ segments, either all the elements in the first segment are smaller than all the elements in the second segment, or all the elements in the first segment are larger than all the elements in the second segment.}
 \]
@@ -1035,24 +958,7 @@ Therefore, the best possible lower bound for sorting arrays of this type in the 
 \end{itemize}",E,i,tested,,,"\textbf{Answer: h}
 After one min-del operation, there will be trees up to degree \(\log n\), at most one of each degree.
 Therefore, the successive linking in the next phase will take at most \(\log n\). The first operation
-will take \(O(n)\) because each element is in its own tree.","\begin{enumerate}
-    \item A Fibonacci heap is given as learned in class. It is given that it is empty. We perform $n$ insert operations and then two del-min operations. You need to choose the answer that contains:
-    \begin{enumerate}
-        \item The worst-case running time of the first min-del operation among the two.
-        \item The worst-case running time of the second min-del operation among the two.
-        \item Justify your answer.
-    \end{enumerate}
-    
-\end{enumerate}
-
-\begin{itemize}
-    \item [A.] First w.c $O(1)$ Second w.c $O(1)$
-    \item [B.] First w.c $O(\log n)$ Second w.c $O(\log n)$
-    \item [C.] First w.c $O(n)$ Second w.c $O(n)$
-    \item [D.] First w.c $O(\log n)$ Second w.c $O(1)$
-    \item [E.] First w.c $O(n)$ Second w.c $O(\log n)$
-    \item [F.] First w.c $O(n)$ Second w.c $O(1)$
-\end{itemize}",question,yes
+will take \(O(n)\) because each element is in its own tree.",B. First w.c \(O(\log n)\) Second w.c \(O(\log n)\) - Fibonacci heap insertion and deletion operations have a worst-case time complexity of \(O(\log n)\) depending on the number of nodes in the heap.,no,yes
 432,c,2011,b,a,2,T2/ds11-BA-sol.pdf,3,"The students were asked to design a new deterministic (non-random) sorting algorithm using comparisons and construct its comparison tree. The number of items to sort is \(N\) and they are all different from each other.
 
 Student A proposed Algorithm A and constructed Tree A for it. The number of leaves in the tree is \(2^{(N \log \log N)}\).  
@@ -1095,7 +1001,7 @@ Now, let's consider Algorithm A. The fact that Tree A has \(2^{N \log \log N}\) 
 
 Therefore, the correct answer is:
 
-\textbf{A. Algorithm A is an incorrect algorithm.}",maybe,yes
+\textbf{A. Algorithm A is an incorrect algorithm.}",no,yes
 435,c,2011,b,a,5,T2/ds11-BA-sol.pdf,10,"Two binary heaps are given: heap 1 with \( n_1 \) elements, and heap 2 with \( n_2 \) elements. 
 Also, it is given that \( n_1 = n_2^2 \). 
 Each heap is maintained in an infinite array. What is the best running time for merging the two heaps, that is, an operation that results in one array (it can be one of the heap arrays, there is no need to preserve the original heaps) containing all the elements, such that they represent a heap?
@@ -1288,15 +1194,9 @@ The elements are not sorted.","The statement is false. In an ""almost sorted"" a
     \item Brief justification:
 \end{enumerate}",B,e,tested,,,"\textbf{Answer:} \\
 b. Incorrect \\
-\textbf{Brief explanation:} A counterexample - X is the root, in one tree Y is the right child, and in another tree Y is the left child.","\begin{enumerate}
-    \item Answer true or false to the following statement. (Mark 'a' for true / 'b' for false)
-    \item Given only pre-order and post-order traversals, a general binary tree can be uniquely reconstructed.
-    \begin{itemize}
-        \item a. True
-        \item b. False
-    \end{itemize}
-    \item Brief justification:
-\end{enumerate}",question,yes
+\textbf{Brief explanation:} A counterexample - X is the root, in one tree Y is the right child, and in another tree Y is the left child.","b. False
+
+Given only pre-order and post-order traversals, a general binary tree cannot be uniquely reconstructed.",yes,yes
 574,C,2016,a,b,5-a,T3/ds16AB-sol.pdf,na,"We want to color the nodes of a full binary search tree (i.e., every non-leaf node has exactly two children) in red and black, so that the coloring satisfies the rules of a red-black tree.
 For each of the following statements, state whether it is true or false. Justify your answer.
 A. If all the leaves are at the same distance from the root, then such a coloring necessarily exists. True / False.",1,"e,f",tested,"אנחנו רוצים לצבוע את הצמתים של עץ חיפוש בינארי מלא (כלומר, לכל צומת שאינו עלה יש בדיוק שני בנים) באדום ובשחור, כך שהצביעה תקיים את הכללים של עץ אדום-שחור.
@@ -1337,17 +1237,7 @@ Therefore, the claim is \text{true}.",no,yes
     \end{itemize}
 \end{enumerate}",na,a,tested,"נתון מערך המכיל n איברים. מספר האיברים השונים הוא k (𝑛 ≤ 𝑘).
 א. מיינו ללא הסבר את סדרי הגודל הבאים אסימפטוטית (𝑛 ≤ 𝑘):
-nlogn, n, nlogk, n+klogk, n^2","n^2, nlogn, nlogk, n+klogk,n","n^2, n\log{n}, n\log{k}, n+k\log{k}, n","\begin{enumerate}
-    \item Given an array containing $n$ elements. The number of distinct elements is $k$ ($n \leq k$).
-    \item Sort the following asymptotic orders without explanation ($n \leq k$):
-    \begin{itemize}
-        \item $n \log n$,
-        \item $n$,
-        \item $n \log k$,
-        \item $n + k \log k$,
-        \item $n^2$
-    \end{itemize}
-\end{enumerate}",question,yes
+nlogn, n, nlogk, n+klogk, n^2","n^2, nlogn, nlogk, n+klogk,n","n^2, n\log{n}, n\log{k}, n+k\log{k}, n","n, n log n, n log k, n + k log k, n^2",no,yes
 597,B,2017,a,a,1-d,T3/ds17AA-sol.pdf,na,"\text{Given an array containing } n \text{ elements. The number of distinct elements is } k \, (k \leq n). \\
 \text{d. Assume the elements are integers between } 1 \text{ and } n^4. \text{ Propose a deterministic algorithm to sort the array.}",na,"l,p",tested,"נתון מערך המכיל n איברים. מספר האיברים השונים הוא k (k ≤ n).
 ד. נניח כי האיברים הם מספרים שלמים בין 1 ל-n^4. הציעו אלגוריתם דטרמיניסטי למיון המערך.
@@ -1486,13 +1376,10 @@ d. When \( k = n \), the array can be stably sorted with complexity \( O(n \log 
 ג. כאשר 𝑘=𝑛/log𝑛 , ניתן למיין יציב את המערך בסיבוכיות (O(𝑛 בתוחלת בעזרת טבלת האש.
 ד. כאשר 𝑘=𝑛 , ניתן למיין יציב את המערך בסיבוכיות O(𝑛loglog𝑛) בתוחלת בעזרת טבלת האש.","פתרון: ג. הסבר: נאתחל טבלת האש A בגודל לפחות 𝑘 (במטרה שעבור כל מפתח יחזיק מצביע לרשימה מקושרת של האיברים במערך עם אותו המפתח, לפי סדר הופעתם במערך). בנוסף נאתחל מערך B בגודל 𝑘 .
 נעבור על המערך המקורי לפי הסדר, ועבור כל איבר, נחפש ב A לפי 𝑘𝑒𝑦 . אם הוא קיים, נכניס את האיבר לסוף הרשימה המקושרת שהאיבר מצביע אליו. אם הוא לא קיים, נוסיף את המפתח, ונאתחל עבור אותו המפתח רשימה מקושרת ונכניס את האיבר לשם. בנוסף בזמן המעבר, אם כאשר אנחנו מחפשים אנחנו לא מוצאים את המפתח, נוסיף את המפתח למערך B . נמיין את המערך B , בזמן 𝑂((𝑛\log𝑛)*log(𝑛\log𝑛))=𝑂(𝑛) . נעבור על B לפי הסדר, נחפש את
-הרשימה המקושרת המתאימה למפתח בטבלת ההאש, ונוסיף את איברי הרשימה המקושרת לפי הסדר למערך המקורי (או למערך פלט חדש).","\textbf{Solution:} c. \textbf{Explanation:} Initialize a hash table $A$ of size at least $k$ (with the goal that for each key, it will hold a pointer to a linked list of the elements in the array with the same key, in the order they appear in the array). Additionally, initialize an array $B$ of size $k$. Traverse the original array in order, and for each element, search $A$ by $key$. If it exists, append the element to the end of the linked list that the element points to. If it does not exist, add the key, initialize a linked list for that key, and insert the element there. Additionally, during traversal, if when searching for the key it is not found, add the key to array $B$. Sort the array $B$ in time $O((n\log n) \cdot \log(n\log n)) = O(n)$. Traverse $B$ in order, search for the corresponding linked list in the hash table, and append the linked list elements in order to the original array (or to a new output array).","a. When \( k = \sqrt{n} / \log n \), the array can be stably sorted in time \( O(\sqrt{n} \log n) \) using a balanced search tree.
-
-b. When \( k = \log n \), the array can be stably sorted in time \( O(n \log \log \log n) \) using a balanced search tree.
-
-c. When \( k = n / \log n \), the array can be stably sorted with complexity \( O(n) \) on average using a hash table.
-
-d. When \( k = n \), the array can be stably sorted with complexity \( O(n \log \log n) \) on average using a hash table.",question,yes
+הרשימה המקושרת המתאימה למפתח בטבלת ההאש, ונוסיף את איברי הרשימה המקושרת לפי הסדר למערך המקורי (או למערך פלט חדש).","\textbf{Solution:} c. \textbf{Explanation:} Initialize a hash table $A$ of size at least $k$ (with the goal that for each key, it will hold a pointer to a linked list of the elements in the array with the same key, in the order they appear in the array). Additionally, initialize an array $B$ of size $k$. Traverse the original array in order, and for each element, search $A$ by $key$. If it exists, append the element to the end of the linked list that the element points to. If it does not exist, add the key, initialize a linked list for that key, and insert the element there. Additionally, during traversal, if when searching for the key it is not found, add the key to array $B$. Sort the array $B$ in time $O((n\log n) \cdot \log(n\log n)) = O(n)$. Traverse $B$ in order, search for the corresponding linked list in the hash table, and append the linked list elements in order to the original array (or to a new output array).","a. BST Sort
+b. BST Sort
+c. Hash Table Sort
+d. Hash Table Sort",question,yes
 801,C,2018,A,B,4-a,T3/ds18AB-Sol.pdf,4,"\begin{quote}
 After looking at the hash table using the chaining method, we thought it would be a good idea to change our choice of data structure (from a linked list to another data structure) to achieve better asymptotic complexity for insertion, search, and deletion from the hash table, even in the worst case (for any load factor), and on average (for load factor > 1). We denote load factor = \(\alpha\). Which data structure should we choose?
 
@@ -1520,12 +1407,7 @@ D. \(O(\log \alpha)\)",d,"a,d,f,g,h",tested,"לאחר שהסתכלנו על טב
 א. ( 𝑂(loglog𝛼
 ב. (𝑂(𝛼log𝛼
 ג. 𝑂(𝛼)
-ד. 𝑂(log𝛼)","ד. הסבר: עבור עץ מאוזן, הסיבוכיות בתוחלת של פעולה תהיה תוחלת של ( log מספר האיברים בתא). מהתזכורת נקבל שהביטוי הנ""ל קטן או שווה ל- log של (תוחלת מספר האיברים בתא). כידוע, תוחלת מספר האיברים בתא הוא 𝛼 , ולכן נקבל שהסיבוכיות בתוחלת היא log𝛼⁡ . התוחלת היא על פוקנציות ההאש מהמשפחה האוניברסלית.","\textbf{D. Explanation}: For a balanced tree, the average complexity of an operation will be the expectation of (log of the number of elements in the cell). From the reminder, we obtain that the above expression is less than or equal to the log of (the expected number of elements in the cell). As is known, the expected number of elements in the cell is \(\alpha\), and therefore we obtain that the average complexity is \(\log \alpha\). The expectation is over the hash functions from the universal family.","The average complexity of insertion, search, and deletion in a hash table using Chaining method can be expressed in terms of the load factor \(\alpha\) as follows:
-
-A. \(O(\log \log \alpha)\)
-B. \(O(\alpha \log \alpha)\)
-C. \(O(\alpha)\)
-D. \(O(\log \alpha)\)",question,yes
+ד. 𝑂(log𝛼)","ד. הסבר: עבור עץ מאוזן, הסיבוכיות בתוחלת של פעולה תהיה תוחלת של ( log מספר האיברים בתא). מהתזכורת נקבל שהביטוי הנ""ל קטן או שווה ל- log של (תוחלת מספר האיברים בתא). כידוע, תוחלת מספר האיברים בתא הוא 𝛼 , ולכן נקבל שהסיבוכיות בתוחלת היא log𝛼⁡ . התוחלת היא על פוקנציות ההאש מהמשפחה האוניברסלית.","\textbf{D. Explanation}: For a balanced tree, the average complexity of an operation will be the expectation of (log of the number of elements in the cell). From the reminder, we obtain that the above expression is less than or equal to the log of (the expected number of elements in the cell). As is known, the expected number of elements in the cell is \(\alpha\), and therefore we obtain that the average complexity is \(\log \alpha\). The expectation is over the hash functions from the universal family.",B. \(O(\alpha \log \alpha)\),no,yes
 804,C,2018,A,B,5,T3/ds18AB-Sol.pdf,9,"\begin{quote}
 In class, we learned about a deterministic \textit{select} that performed a \textit{partition} using a \textit{pivot} chosen by the median-of-medians algorithm. Assume that instead of the aforementioned \textit{pivot}, you received a new algorithm called \textit{GoodPivot} that takes an array containing \( n \) keys and returns the value of the \( 0.05n \)-th smallest element. For example, on an array of size 1000, it will return the value of the 50th smallest key. \textit{GoodPivot} does not call \textit{select} (unlike the median-of-medians algorithm). Assume the running time of \textit{GoodPivot} is bounded by \( c_1 \times n \), and the running time of \textit{partition} is bounded by \( c_2 \times n \). We are interested in the cost of \textit{select} using \textit{GoodPivot}. Choose the tightest answer. The running time of the algorithm is bounded by:
 a. \( cn \)
@@ -1572,7 +1454,7 @@ T(n) &\leq T(n-1) + c_1 \cdot n + c_2 \cdot n \\
 
 Therefore, by induction, the cost of \textit{select} using \textit{GoodPivot} is \(O(n)\).
 
-The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",maybe,yes
+The tightest answer for the running time of the algorithm is \(a. \, cn\). The lowest value of \(c\) is the sum of \(c_1\) and \(c_2\), assuming that these are the dominating factors in the overall running time.",no,yes
 805,C,2018,A,B,6-a,T3/ds18AB-Sol.pdf,5,"In order to improve \texttt{quicksort}, a new function \texttt{GreatPivot} has been created. It receives an array containing $n$ keys and returns a random value that is uniformly distributed among all key values that are greater than or equal to the $\lceil 0.05n \rceil$-th largest and less than or equal to the $\lfloor 0.95n \rfloor$-th largest element. The \texttt{partition} function performs the partitioning using this value. In other words, unlike \texttt{randpartition}, which selects a pivot randomly from all elements, this choice is restricted to only 90\% of the elements mentioned above.
 
 The cost of \texttt{greatpivot} is $O(1)$, and the cost of \texttt{partition} is linear. The time complexity of \texttt{quicksort} when using \texttt{partition} and \texttt{GreatPivot} is, in the worst case:
@@ -1617,21 +1499,9 @@ Merge n/2-2 with n/2+2
 \text{Justification:} \\
 \text{Merge } \frac{n}{2} - 2 \text{ with } \frac{n}{2} + 2 \\
 \text{Cost of } n \text{ union operations (order of magnitude): } O(n \log n) \\
-\text{Justification: For each element, each transfer increases its group by a factor of at least 1.5 (if size > 10), so the number of times it transfers is at most } 10 + \log_{\text{base } 1.5} n","\documentclass{article}
-\begin{document}
+\text{Justification: For each element, each transfer increases its group by a factor of at least 1.5 (if size > 10), so the number of times it transfers is at most } 10 + \log_{\text{base } 1.5} n","1. The maximum cost of the union operation is $5(|\text{size}(A)| + |\text{size}(B)|)$.
 
-In class, we learned about Union-Find implemented with linked lists. In this implementation, the \textit{union} operation was costly, and the \textit{find} was inexpensive. 
-
-Reminder: In the union operation, the shorter list was merged into the longer one. Each list had a leader to whom all the elements of the list pointed. In the union operation, the algorithm traversed all the elements in the shorter list and updated their pointer to the leader of the longer list. The find operation returned the leader in $O(1)$ time.
-
-We will deal with careless Find-Union. In it, merging the shorter list into the longer one is emphasized only if a certain condition concerning the two lists $A$ and $B$ holds. Otherwise, one is arbitrarily merged into the other.
-
-If the ""emphasis"" condition is $5 < |\text{size}(A) - \text{size}(B)|$:
-
-1. What is the maximum cost of the \textit{union} operation? (Counted by the number of elements changing groups)
-2. What will be the complexity of $n$ \textit{union} operations? (Order of magnitude)
-
-\end{document}",question,yes
+2. The complexity of $n$ union operations will be $O(n)$.",no,yes
 808,B,2018,A,B,7-b,T3/ds18AB-Sol.pdf,6,"\begin{itemize}
     \item In class, we learned about Union-Find implemented with linked lists. In this implementation, the union operation was costly and the find operation was cheap.
     \item Reminder: In the union operation, the shorter list was merged into the longer one. Each list had a leader to which all elements of the list pointed. In the union operation, the algorithm iterated over all the elements of the shorter list and updated their pointer to the leader of the longer list. The find operation returned the leader in \( O(1) \) time.
@@ -1668,7 +1538,7 @@ col| >= (n/10)*(10*9/2) = n*9/2 > n       ->       algorithm will rpeat stage 1|
 \text{False.}
 \]
 
-Alice cannot proceed to the second stage of the algorithm because the load factor of the main table is too high. The load factor is calculated as \( \frac{n - 0.9n}{n} = 0.1 \), which means that 90% of the table is full. The algorithm requires that the load factor of the main table should be less than 0.5 to proceed to the second stage of the algorithm. Therefore, since the load factor is 0.1, Alice cannot proceed to the second stage.",maybe,maybe
+Alice cannot proceed to the second stage of the algorithm because the load factor of the main table is too high. The load factor is calculated as \( \frac{n - 0.9n}{n} = 0.1 \), which means that 90% of the table is full. The algorithm requires that the load factor of the main table should be less than 0.5 to proceed to the second stage of the algorithm. Therefore, since the load factor is 0.1, Alice cannot proceed to the second stage.",no,yes
 811,C,2018,A,B,8-c,T3/ds18AB-Sol.pdf,2,"Alice ran the Perfect Hash algorithm learned in class (Two Level Hashing) on 𝑛>100,000 keys. In running the first part of the algorithm (creating the main table), Alice chose a function ℎ1 and found that all 0.9𝑛 of the last slots in the table are empty (we do not know what happened in the first slots). Answer true\false and explain: In light of the results of the first stage, if Alice continues directly to the second stage, then the expected number of attempts to obtain good functions in the second stage will be greater than 10.",FALSE,g,tested,"אליס הריצה את האלגוריתם Perfect Hash שנלמד בכיתה ( Two Level Hashing ) על 𝑛>100,000 מפתחות. בהרצת החלק הראשון של האלגוריתם )יצירת הטבלה הראשית) בחרה אליס פונקציה ℎ1 וגילתה שכל 0.9𝑛 התאים האחרונים בטבלה ריקים (לא ידוע לנו מה קרה בתאים הראשונים). עני נכון\לא נכון ונמקי: לאור תוצאות השלב הראשון, במידה ואליס תמשיך ישירות לשלב השני אזי תוחלת מספר הניסיונות להשגת פונקציות טובות בשלב השני יהיה גדול מ 10.",לא. הסבר: התוחלת חסומה על ידי 2.,\textit{No. Explanation: The expectation is bounded by 2.},"In the first stage of the algorithm, if 0.9𝑛 of the last slots in the table are empty, it implies that the load factor (λ) for the main table is 0.1. The load factor is given by the formula:
 
 \[ \lambda = \frac{n}{m} \]
@@ -1720,13 +1590,7 @@ The runtime complexity was (choose the tightest answer):
 ב.	(O(nlogn
 ג.	(O(n2
 ד.	כל תשובה בין (O(n לבין ףמ)0הינה אפשרית ותלויה בערכי המערך.
-ה.	אי אפשר לחסום את זמן הריצה כי ניתן רק לחשב את תוחלת זמן הריצה.","Worst case is between 1 + 2 + 3 + ⋯ + 0.75n = Θ(n^2) and 0.25n + 0.25n + 1 + 0,25n + 2 + ... . n = Θ (n^2)",مקרה הגרוע ביותר הוא בין 1 + 2 + 3 + ⋯ + 0.75n = \Theta(n^2) ל-0.25n + 0.25n + 1 + 0.25n + 2 + ... + n = \Theta(n^2),"\begin{enumerate}
-    \item \(O(n)\)
-    \item \(O(n \log n)\)
-    \item \(O(n^2)\)
-    \item Any answer between \(O(n)\) and \(O(n^2)\) is possible and depends on the values of the array.
-    \item It is impossible to bound the running time since only the expected running time can be calculated.
-\end{enumerate}",question,maybe
+ה.	אי אפשר לחסום את זמן הריצה כי ניתן רק לחשב את תוחלת זמן הריצה.","Worst case is between 1 + 2 + 3 + ⋯ + 0.75n = Θ(n^2) and 0.25n + 0.25n + 1 + 0,25n + 2 + ... . n = Θ (n^2)",مקרה הגרוע ביותר הוא בין 1 + 2 + 3 + ⋯ + 0.75n = \Theta(n^2) ל-0.25n + 0.25n + 1 + 0.25n + 2 + ... + n = \Theta(n^2),It is impossible to bound the running time since only the expected running time can be calculated.,no,no
 819,C,2018,A,A,2,T3/ds18AA-Sol.pdf,5,"In class, we learned about select which uses a random partition. In a specific run performed by this algorithm on an array \( A \) of length \( n \), the function select (including calls to itself) was called 0.75\( n \) times (where \( n \) is divisible by 4) in total. Assume the running time of partition is linear in the length of its input. We are interested in the array \( A \) being sorted (from smallest to largest).
 After the above run, the number of elements in the array \( A \) that are not in the correct place is (provide the tightest answer):
 A. At most 0.25\( n \)
@@ -1783,30 +1647,7 @@ e. The answer depends on \(k\)
 ד.        l#links(A) — #links(B)l ~ 2fc
 ה.        התשובה תלויה ב  K","הסבר קצר: (לצורך המחשת ההסבר ניתן להשתמש ב3=k אך הנימוק נכון ל 1<k כללי).
 In one DS the minimum is in a tree of size 1, in the other DS the minimum is in a tree of
-.(size 2k (with k children","\textit{Short explanation: (To illustrate the explanation, we can use $k=3$, but the reasoning is valid for general $k>1$). In one data structure, the minimum is in a tree of size 1, whereas in the other data structure, the minimum is in a tree of size $2k$ (with $k$ children).}","\documentclass{article}
-\usepackage[utf8]{inputenc}
-\begin{document}
-
-In class, we learned about lazy binomial heaps. We will be interested in an implementation where: 
-1. insert is performed by adding a tree of size 1 to the end of the list of trees. 
-2. In deletemin, after removing the minimum, we insert its children at the end of the list of trees and perform successive linking by scanning the trees (starting from the head of the list and ending at its tail). 
-
-Alice (A) performed insert of the elements \(1, 2, \ldots, 2^k, 2^k + 1, 2^k + 2\) in ascending order and then executed two deletemin operations. 
-Bob (B) performed insert of the same elements in descending order and then executed two deletemin operations. 
-Let \(\#\text{links}(A), \#\text{links}(B)\) denote the number of link operations that will be performed in the second deletemin operation in the structure of A and in the structure of B, respectively. 
-For \(1 < k\):
-
-a. \(0 \sim |\#\text{links}(A) - \#\text{links}(B)|\)
-
-b. \(|\#\text{links}(A) - \#\text{links}(B)| \sim \log k\)
-
-c. \(|\#\text{links}(A) - \#\text{links}(B)| \sim k\)
-
-d. \(|\#\text{links}(A) - \#\text{links}(B)| \sim 2^k\)
-
-e. The answer depends on \(k\)
-
-\end{document}",question,
+.(size 2k (with k children","\textit{Short explanation: (To illustrate the explanation, we can use $k=3$, but the reasoning is valid for general $k>1$). In one data structure, the minimum is in a tree of size 1, whereas in the other data structure, the minimum is in a tree of size $2k$ (with $k$ children).}",b. \(|\#\text{links}(A) - \#\text{links}(B)| \sim \log k\),no,no
 822,C,2018,A,A,5,T3/ds18AA-Sol.pdf,1.6,"\begin{quote}
 Bob implemented the perfect hash algorithm studied in class (two-level hashing). In running the first part of the algorithm (creating the main table), Bob chose the function \( h_1 \) and discovered that for the last \(1 + n - \sqrt{n} \) keys that he inserted into the main table, each one entered a ""private"" cell (i.e., without collision). Based on this information, Bob decided not to check the other keys and not to try additional functions in the first stage, and move on to the second stage. Answer true\false and justify. Within no more than 2 attempts in the second stage (for each sub-table), a perfect hash will be found.
 \end{quote}",FALSE,g,tested,"בוב הריץ את אלגוריתם perfect hash שנלמד בכיתה (two level hashing). בהרצת החלק הראשון של האלגוריתם (יצירת הטבלה הראשית) בחר בוב פונקציה h1 וגילה ש  sqrt(n) +n + 1-  המפתחות האחרונים שהכניס לטבלה הראשית נכנסו כל אחד לתא ""פרטי"" (כלומר ללא התנגשות). על סמך מידע זה החליט בוב שלא יבדוק את המפתחות האחרים ולא ינסה פונקציות נוספות בשלב הראשון ויעבור לבצוע השלב השני. ענה נכון\לא נכון ונמק. תוך 2 נסיונות לכל היותר בשלב השני (עבור כל טבלת משנה) - ימצא hash מושלם.",לא נכון. שלב שני מייצר טבלות ריבועיות ולכן עובד בתוחלת בשני נסיונות נתוני השאלה לא השפיעו על זה.,\textit{Not true. The second stage produces square tables and therefore works on average in two attempts. The data from the question did not affect this.},"\textbf{Solution:}
@@ -1977,7 +1818,7 @@ A van Emde Boas tree is a data structure that supports the operations of inserti
 
 Specifically, we can store the indices of the vector in a van Emde Boas tree, where the universe size is m. When inserting at position i, we insert the index i into the van Emde Boas tree in O(\log \log m) time. Similarly, when reading from position i, we can check if index i is present in the van Emde Boas tree in O(\log \log m) time. Finally, when deleting at position i, we can remove index i from the van Emde Boas tree in O(\log \log m) time.
 
-Therefore, by using a van Emde Boas tree to represent a vector of length m, we can achieve insertion, reading, and deletion at position i in O(\log m) worst-case time for each operation.",maybe yes,yes
+Therefore, by using a van Emde Boas tree to represent a vector of length m, we can achieve insertion, reading, and deletion at position i in O(\log m) worst-case time for each operation.",no,yes
 840,B,2018,A,A,15-c,T3/ds18AA-Sol.pdf,3,"\textbf{In the following section, the time and space complexity of initialization is \(O(1)\), and the space complexity at any given moment is \(O\) of the number of elements in the data structure. Describe how a matrix of size \(m \times m\) can be represented, supporting the operations of insertion at position \((i,j)\), reading from position \((i,j)\), and deletion from position \((i,j)\), in \(O(\log m)\) worst-case time for each operation.}",na,"a,f",tested,"בסעיף הבא, סיבוכיות זמן ומקום האיתחול הוא (1)O, וסיבוכיות המקום בכל רגע נתון הוא O של מספר האיברים במבנה הנתונים. תאר כיצד ניתן לייצג מטריצה בגודל m × m שתומך בפעולות הכנסה למקום ה(i,j), קריאה מהמקום ה(i,j), ומחיקה מהמקום ה(i,j), בזמן O(logm) במקרה הגרוע לכל פעולה.","מבנה נתונים מרכזי: עץ AVL. תיאור קצר:
 הkey יהיה הזוג (i,j) כאשר ההשוואה בין מפתחות תהיה לקסיקוגרפית (משווים את i, ואם יש תיקו משווים את j).
 הvalue יהיה תוכן המטריצה במקום ה(i,j).
@@ -2001,7 +1842,7 @@ Deletion:
 
 To delete from position \((i, j)\), we follow the same steps as in reading, locate the node representing row \(i\), and then delete column \(j\) from the inner BST or sorted linked list of that node. Both of these operations take \(O(\log m)\) time in a balanced BST.
 
-Therefore, by using a modified Balanced Binary Search Tree to represent the matrix, we can achieve \(O(\log m)\) worst-case time complexity for insertion, reading, and deletion operations at any given position in the matrix.",maybe yes,yes
+Therefore, by using a modified Balanced Binary Search Tree to represent the matrix, we can achieve \(O(\log m)\) worst-case time complexity for insertion, reading, and deletion operations at any given position in the matrix.",yes,yes
 842,B,2018,A,A,16-a,T3/ds18AA-Sol.pdf,2,"\text{Describe an implementation of a data structure with the following operations (x is a key):}
 
 \text{Insert(x) - in amortized time \(O(\log n)\).}
@@ -2084,7 +1925,7 @@ Here is the implementation in latex format:
     
     \item \textbf{Delete(x):} \\
     First, delete the key x from the hash table in $O(1)$ time. Then, delete the key x from the binary search tree. To achieve $O(1)$ time complexity, make sure to keep track of the parent node during insertion. This way, deletion can be done in $O(1)$ time by replacing the node to be deleted with its predecessor/successor and updating the necessary pointers. This operation can be done in worst-case $O(\log n)$ time as well to maintain the balance of the tree.
-\end{itemize}",maybe no,yes
+\end{itemize}",no,yes
 847,B,2017,A,B,1-c,T3/ds17AB-sol.pdf,6.25,Two AVL trees of size \( n \) each are given. Can they be merged in \( O(n) \) time? Prove using an algorithm or disprove.,na,f,tested,נתונים שני עצי AVL בגודל n כל אחד. האם ניתן למזגם בזמן O(n)? הוכח באמצעות אלגוריתם או הפרך.,"הוכחה. נבצע in order walk על כל אחד מהעצים ונקבל שני מערכים ממוינים של איבריהם. נבצע merge sort לקבלת מערך ממויך יחיד. נבנה ממנו עץ מאוזן באופן הבא: החציון יהיה השורש, הסטטיסטי סדר ה-1/4 וה-3/4 יהיו הבן השמאלי והימני של השורש בהתאמה, וכן הלאה.","\textbf{Proof.} Perform an in-order walk on each of the trees and obtain two sorted arrays of their elements. Perform a merge sort to obtain a single sorted array. Construct a balanced tree from it as follows: the median will be the root, the 1/4 and 3/4 order statistics will be the left and right child of the root respectively, and so on.","To merge two AVL trees of size \( n \) each in \( O(n) \) time, we can perform the following steps:
 
 1. Convert the first AVL tree into a sorted array in \( O(n) \) time using an in-order traversal.
