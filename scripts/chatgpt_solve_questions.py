@@ -3,7 +3,7 @@ import openai
 from openai import OpenAI
 
 # Set up chatgpt
-with open("/Users/stavfn/Projects/LLM_education/api_key.txt", "r") as api_key_file:
+with open("C:\\Projects\\LLM_education\\api_key.txt", "r") as api_key_file:
     key = api_key_file.readline()
 
 client = OpenAI(
@@ -22,12 +22,12 @@ def chat_gpt(prompt):
 
 # Set up data
 
-file_path = "~/Projects/LLM_education/results/big_data_chat_solutions_checked.csv"
-df = pd.read_csv(file_path)
+file_path = "C:\\Projects\\LLM_education\\results\\questions_A_to_test.csv"
+df = pd.read_csv(file_path, engine='python')
 
-current_questions = df.loc[df['is_chat_correct'] == "question"]
+current_questions = df.loc[(df['question_type'] == "A") & (df['dataset'] == "tested")]
 
-msg_prefix = "Answer the following question. Write only the solution without the question: "
+msg_prefix = "Answer the following question. Write the solution in Latex format: "
 
 chat_answers = []
 for index, row in current_questions.iterrows():
@@ -37,5 +37,5 @@ for index, row in current_questions.iterrows():
     print(row['question_number'])
 
 current_questions['chat_answer_new'] = chat_answers
-current_questions.to_csv("~/Projects/LLM_education/results/questions_no_solution_solutions.csv")
+current_questions.to_csv("C:\\Projects\\LLM_education\\results\\questions_A_solutions.csv")
 
