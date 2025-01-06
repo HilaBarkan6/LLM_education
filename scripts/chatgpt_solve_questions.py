@@ -2,6 +2,7 @@ import pandas as pd
 import openai
 from openai import OpenAI
 
+
 # Set up chatgpt
 with open("/Users/stavfn/Projects/LLM_education/api_key.txt", "r") as api_key_file:
     key = api_key_file.readline()
@@ -9,6 +10,8 @@ with open("/Users/stavfn/Projects/LLM_education/api_key.txt", "r") as api_key_fi
 client = OpenAI(
     api_key=key,
 )
+
+
 
 
 def chat_gpt(prompt):
