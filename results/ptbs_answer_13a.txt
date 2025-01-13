@@ -1,0 +1,3 @@
+Yes.  
+A short explanation:  
+You can simply insert the elements in the order in which they are stored and construct a tree in the form of a thread. Each time a new element is inserted, check if it is smaller or larger than the previous element, and accordingly decide if it is the left/right child of the previous element.

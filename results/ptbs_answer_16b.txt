@@ -1,0 +1,1 @@
+\textbf{Central Data Structure:} AVL Tree. \textbf{Brief Description:} We will use the standard operations of an AVL tree. \textbf{Explanation for Complexity:} In the banker's method - at the time of insertion \((x(\text{insert})\), we insert the element, and additionally leave \(\log n\) coins for its deletion.
