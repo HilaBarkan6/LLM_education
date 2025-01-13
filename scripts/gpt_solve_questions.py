@@ -4,14 +4,12 @@ from openai import OpenAI
 
 
 # Set up chatgpt
-with open("C:\\Projects\\LLM_education\\api_key.txt", "r") as api_key_file:
+with open(".\\api_key.txt", "r") as api_key_file:
     key = api_key_file.readline()
 
 client = OpenAI(
     api_key=key,
 )
-
-
 
 
 def chat_gpt(prompt):
@@ -24,11 +22,8 @@ def chat_gpt(prompt):
 
 
 # Set up data
-
-file_path = "C:\\Projects\\LLM_education\\results\\questions_A_to_test.csv"
-df = pd.read_csv(file_path, engine='python')
-
-current_questions = df.loc[(df['question_type'] == "A") & (df['dataset'] == "tested")]
+file_path = ".\\evaluation_dataset\\evaluation_dataset.csv"
+current_questions = pd.read_csv(file_path, engine='python')
 
 msg_prefix = "Answer the following question. Write the solution in Latex format: "
 
@@ -39,6 +34,8 @@ for index, row in current_questions.iterrows():
     chat_answers.append(chat_answer)
     print(row['question_number'])
 
-current_questions['chat_answer_new'] = chat_answers
-current_questions.to_csv("C:\\Projects\\LLM_education\\results\\questions_A_solutions.csv")
+current_questions['chat_answer'] = chat_answers
+
+# path to output file
+current_questions.to_csv(".\\results\\output_with_solutions.csv")
 
